@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .example-relative {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            border: 3px solid rgb(87, 33, 173);
+        }
+
+        .example-absolute {
+            position: absolute;
+            top: 80px;
+            right: 5px;
+            width: 200px;
+            height: 100px;
+            border: 3px solid rgb(218, 73, 16);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="example-relative">这是父元素，有 relative 定位属性
+        <div class="example-absolute">
+            这是子元素，有 absolute 定位属性
+        </div>
+    </div>
+</body>
+
+</html>
