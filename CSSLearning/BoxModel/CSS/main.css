@@ -1,0 +1,19 @@
+.box1 {
+    height: 200px;
+    width: 200px;
+    background-color: #615200;
+    color: aliceblue;
+    border: 10px solid red;
+    padding: 25px;
+    margin: 25px;
+}
+
+.box2 {
+    height: 300px;
+    width: 300px;
+    background-color: #004d61;
+    color: aliceblue;
+    border: 10px solid blue;
+    padding: 25px;
+    margin: 25px;
+}
