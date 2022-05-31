@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <!-- 文本框，注意有 placeholder 提示符 -->
+        用户名：<br>
+        <input type="text" name="name" placeholder="请输入用户名"><br>
+        <!-- 密码框 -->
+        密码：<br>
+        <input type="password" name="ps" placeholder="请输入密码"><br>
+        年龄：<br>
+        <!-- 数字输入框，注意 min 和 value 属性-->
+        <input type="number" name="age" min="18" value="18"><br>
+        <!-- 单选按钮, 注意 checked 属性 -->
+        性别：<br>
+        <input type="radio" name="gender" value="male" checked> 男<br>
+        <input type="radio" name="gender" value="female"> 女<br>
+        <input type="radio" name="gender" value="other"> 其它<br>
+        <!-- 下拉列表，注意 selected 属性 -->
+        Drink：<br>
+        <select name="Drink">
+            <option value="C">Coffee</option>
+            <option value="M" selected>Milk</option>
+            <option value="T">Tea</option>
+        </select><br>
+        <!-- 多选框 -->
+        您有哪些交通工具：<br>
+        <input type="checkbox" name="vehicle1" value="Bike"> 自行车<br>
+        <input type="checkbox" name="vehicle2" value="Motocycle" checked> 摩托车<br>
+        <input type="checkbox" name="vehicle3" value="Car"> 轿车<br>
+        <input type="checkbox" name="vehicle4" value="Jet"> 飞机<br>
+        <!-- 日期选择器 -->
+        您的工作日期：<br>
+        <input type="date"><br>
+        您的工作时间：<br>
+        <input type="time"><br>
+        <!-- 文件选择器 -->
+        上传您的照片:<br>
+        <input type="file" name="photo"><br>
+        您的建议：<br>
+        <textarea name="message" rows="5" cols="30">
+        The cat was playing in the garden.
+        </textarea><br>
+        <!-- 表单提交/重置按钮，将表单中的数据取消或传输给服务器端进行处理 -->
+        <input type="submit" value="提 交">
+        <input type="reset" value="重 置">
+    </form>
+</body>
+
+</html>
