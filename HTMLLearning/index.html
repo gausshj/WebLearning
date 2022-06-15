@@ -4,36 +4,93 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width initial-scale=1'>
-
-    <link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext'
-        rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="./CSS/typora.css">
+    <link rel="stylesheet" href="../CSS/mdb.min.css">
+    <link rel="stylesheet" href="./CSS/main.css">
     <title>HTML学习总结</title>
 </head>
 
-<body class='typora-export os-windows'>
+<body>
+    <!-- Sidenav -->
+    <nav id="sidenav-1" class="sidenav" data-mdb-hidden="false">
+        <ul class="sidenav-menu">
+            <li class="sidenav-item">
+                <a class="sidenav-link"><span>前言</span></a>
+                <ul class="sidenav-collapse show">
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#11-网页的组成">1.1 网页的组成</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#12-开发工具">1.2 开发工具</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#一何为html"><span>一、何为html</span></a>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#二HTML文档结构"><span>二、HTML文档结构</span></a>
+                <ul class="sidenav-collapse show">
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#21-新建工作目录">2.1 新建工作目录</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#22-新建html文件">2.2 新建HTML文件</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#23-查看结果">2.3 查看结果</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link"><span>Category 2</span></a>
+                <ul class="sidenav-collapse">
+                    <li class="sidenav-item">
+                        <a class="sidenav-link">Link 4</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link">Link 5</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- Sidenav -->
+
+    <!-- Toggler -->
+    <button data-mdb-toggle="sidenav" 
+            data-mdb-target="#sidenav-1" 
+            class="btn btn-primary position-fixed" 
+            aria-controls="#sidenav-1" 
+            aria-haspopup="true"
+            >
+        <i class="fas fa-bars"></i>
+    </button>
+    <!-- Toggler -->
     <div class='typora-export-content'>
         <div id='write' class=''>
             <div class='md-toc' mdtype='toc'>
                 <p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1"
                         data-ref="n3"><a class="md-toc-inner" href="#前言">前言</a></span><span role="listitem"
                         class="md-toc-item md-toc-h2" data-ref="n4"><a class="md-toc-inner"
-                            href="#1网页的组成">1、网页的组成</a></span><span role="listitem" class="md-toc-item md-toc-h2"
-                        data-ref="n8"><a class="md-toc-inner" href="#2开发工具">2、开发工具</a></span><span role="listitem"
+                            href="#11-网页的组成">1.1 网页的组成</a></span><span role="listitem" class="md-toc-item md-toc-h2"
+                        data-ref="n8"><a class="md-toc-inner" href="#12-开发工具">1.2 开发工具</a></span><span role="listitem"
                         class="md-toc-item md-toc-h1" data-ref="n14"><a class="md-toc-inner"
                             href="#一何为html">一、何为HTML</a></span><span role="listitem" class="md-toc-item md-toc-h1"
                         data-ref="n23"><a class="md-toc-inner" href="#二html文档结构">二、HTML文档结构</a></span><span
                         role="listitem" class="md-toc-item md-toc-h2" data-ref="n24"><a class="md-toc-inner"
-                            href="#1新建工作目录">1、新建工作目录</a></span><span role="listitem" class="md-toc-item md-toc-h3"
-                        data-ref="n25"><a class="md-toc-inner" href="#11-visual-studio-code新建工作目录">1.1 Visual Studio Code新建工作目录</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n29"><a
-                            class="md-toc-inner" href="#12-webstorm新建工作目录">1.2 WebStorm新建工作目录</a></span><span
+                            href="#21-新建工作目录">2.1 新建工作目录</a></span><span role="listitem" class="md-toc-item md-toc-h3"
+                        data-ref="n25"><a class="md-toc-inner" href="#211-visual-studio-code新建工作目录">2.1.1 Visual Studio Code新建工作目录</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n29"><a
+                            class="md-toc-inner" href="#212-webstorm新建工作目录">2.1.2 WebStorm新建工作目录</a></span><span
                         role="listitem" class="md-toc-item md-toc-h2" data-ref="n34"><a class="md-toc-inner"
-                            href="#2新建html文件">2、新建HTML文件</a></span><span role="listitem" class="md-toc-item md-toc-h3"
-                        data-ref="n35"><a class="md-toc-inner" href="#21-visual-studio-code新建html文件">2.1 Visual Studio Code新建HTML文件</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n40"><a
-                            class="md-toc-inner" href="#22-webstorm新建html文件">2.2 WebStorm新建HTML文件</a></span><span
+                            href="#22-新建html文件">2.2 新建HTML文件</a></span><span role="listitem" class="md-toc-item md-toc-h3"
+                        data-ref="n35"><a class="md-toc-inner" href="#221-visual-studio-code新建html文件">2.2.1 Visual Studio Code新建HTML文件</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n40"><a
+                            class="md-toc-inner" href="#222-webstorm新建html文件">2.2.2 WebStorm新建HTML文件</a></span><span
                         role="listitem" class="md-toc-item md-toc-h2" data-ref="n43"><a class="md-toc-inner"
-                            href="#23-查看结果">2.3 查看结果</a></span><span role="listitem" class="md-toc-item md-toc-h2"
-                        data-ref="n44"><a class="md-toc-inner" href="#231-visual-studio-code查看结果">2.3.1 Visual Studio Code查看结果</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n57"><a
+                            href="#23-查看结果">2.3 查看结果</a></span><span role="listitem" class="md-toc-item md-toc-h3" 
+                        data-ref="n57"><a class="md-toc-inner" href="#231-visual-studio-code查看结果">2.3.1 Visual Studio Code查看结果</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n57"><a
                             class="md-toc-inner" href="#232-webstorm查看结果">2.3.2 WebStorm查看结果</a></span><span
                         role="listitem" class="md-toc-item md-toc-h1" data-ref="n62"><a class="md-toc-inner"
                             href="#三html文档结构分析">三、HTML文档结构分析</a></span><span role="listitem"
@@ -84,12 +141,13 @@
                             href="#参考链接">参考链接</a></span>
                 </p>
             </div>
+            
             <h1 id='前言'><span>前言</span></h1>
-            <h2 id='1网页的组成'><span>1、网页的组成</span></h2>
+            <h2 id='11-网页的组成'><span>1.1 网页的组成</span></h2>
             <p><span>网页主要由三个部分组成：HTML、CSS、JavaScript</span></p>
             <p><img src="./Img/PartOfAWebPage.png" alt="网页的组成部分" style="zoom:50%;" /></p>
             <p><span>其中HTML可以理解为网页的结构，CSS对其进行修饰，使得网页更加精美，JavaScript提供了交互方法。</span></p>
-            <h2 id='2开发工具'><span>2、开发工具</span></h2>
+            <h2 id='12-开发工具'><span>1.2 开发工具</span></h2>
             <p><span>市面上的编辑器比较多，如</span><a href='https://www.adobe.com/cn/products/dreamweaver.html'><span>DreamWeaver</span></a><span>、</span><ahref='https://code.visualstudio.com/'><span>Visual Studio Code</span></a><span>和</span><ahref='https://www.jetbrains.com/webstorm/'><span>WebStorm</span></a><span>。笔者三者都有使用过，除了Visual Studio Code，其余两者是付费软件。DreamWeaver由Adobe公司开发，笔者使用比较少。WebStorm和Visual Studio Code体验都比较好，其中WebStorm是JetBrain公司开发的软件，对有使用过如Pycharm或者IDEA的用户来说WebStorm上手比较亲切。Visual Studio Code是微软开发的跨平台代码编辑器。通过下载插件，Visual Studio Code的使用体验也非常好。</span></p>
             <p><span>下载地址：</span></p>
             <p><a href='https://www.adobe.com/cn/products/dreamweaver.html'><span>网站设计软件 | Adobe Dreamweaver</span></a></p>
@@ -109,17 +167,17 @@
             
             
             <h1 id='二html文档结构'><span>二、HTML文档结构</span></h1>
-            <h2 id='1新建工作目录'><span>1、新建工作目录</span></h2>
-            <h3 id='11-visual-studio-code新建工作目录'><span>1.1 Visual Studio Code新建工作目录</span></h3>
+            <h2 id='21-新建工作目录'><span>2.1 新建工作目录</span></h2>
+            <h3 id='211-visual-studio-code新建工作目录'><span>2.1.1 Visual Studio Code新建工作目录</span></h3>
             <p><span>打开</span><code>Visual Studio Code</code><span>,依次点击</span><span style="color:Green"><span>文件-&gt;打开文件夹</span></span></p>
             <p><img src="./Img/image-2.png" alt="image-20220513130224327" style="zoom: 33%;" /></p>
-            <h3 id='12-webstorm新建工作目录'><span>1.2 WebStorm新建工作目录</span></h3>
+            <h3 id='212-webstorm新建工作目录'><span>2.1.2 WebStorm新建工作目录</span></h3>
             <p><span>打开WebStorm，然后依次点击</span><span style="color:green"><span>文件-&gt;新建-&gt;项目</span></span></p>
             <p><img src="./Img/image-3.png" alt="image-20220513125913120" style="zoom:33%;" /></p>
             <p><span>然后在弹出的窗口选择文件位置</span></p>
             <p><img src="./Img/image-4.png" alt="image-20220513130058081" style="zoom:33%;" /></p>
-            <h2 id='2新建html文件'><span>2、新建HTML文件</span></h2>
-            <h3 id='21-visual-studio-code新建html文件'><span>2.1 Visual Studio Code新建HTML文件</span></h3>
+            <h2 id='22-新建html文件'><span>2.2 新建HTML文件</span></h2>
+            <h3 id='221-visual-studio-code新建html文件'><span>2.2.1 Visual Studio Code新建HTML文件</span></h3>
             <p><span>将鼠标移到文件夹上，右边会出现四个图标，将鼠标移到图标上会给出提示，如第一个是新建文件，第二个是新建文件夹。</span></p>
             <p><img src="./Img/image-5.png" alt="image-20220513131015421" style="zoom: 33%;" /></p>
             <p><span>点击新建文件，这里命名为</span><code>MyFirstPage.html</code><span>，在该文件中输入如下内容：</span></p>
@@ -170,12 +228,11 @@
                 Untitled</a> by Gausshj (<a href="https://codepen.io/gausshj">@gausshj</a>)
                 on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
-
-            <h3 id='22-webstorm新建html文件'><span>2.2 WebStorm新建HTML文件</span></h3>
+            <h3 id='222-webstorm新建html文件'><span>2.2.2 WebStorm新建HTML文件</span></h3>
             <p><span>依次点击</span><span style="color:green"><span>文件-&gt;新建-&gt;文件</span></span><span>，输入文件名</span><code>MyFirstPage.html</code><span>，同样输入上面的内容</span></p>
             <p><img src="./Img/image-6.png" alt="image-20220513131524565" style="zoom:33%;" /></p>
             <h2 id='23-查看结果'><span>2.3 查看结果</span></h2>
-            <h2 id='231-visual-studio-code查看结果'><span>2.3.1 Visual Studio Code查看结果</span></h2>
+            <h3 id='231-visual-studio-code查看结果'><span>2.3.1 Visual Studio Code查看结果</span></h3>
             <p><span>可以使用插件</span><code>open in browser</code><span>或</span><code>Live Serve</code><span>。</span></p>
             <blockquote>
                 <p><span>推荐使用</span><code>Live Serve</code><span>，网页会随着我们更改同步更改（需要打开自动保存），开发效率更高。</span></p>
@@ -1702,6 +1759,11 @@
     </div>
     <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     <script src="./JS/main.js"></script>
+    <script type="text/javascript" src="../JS/mdb.min.js"></script>
+    <script>
+        const sidenavInstance = mdb.Sidenav.getInstance(document.getElementById('sidenav-1'));
+        sidenavInstance.update({color:'warning'});
+    </script>
 </body>
 
 </html>
