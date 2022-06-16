@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="../CSS/mdb.min.css">
     <link rel="stylesheet" href="./CSS/main.css">
     <title>HTML学习总结</title>
+    <style>
+        body{
+            background-color:#fff3f332;
+            background-image: url(./Img/Background.webp);
+            background-position: center;
+            background-attachment:fixed;
+            background-size:cover;
+            background-repeat:no-repeat;
+        }
+    </style>
 </head>
 
 <body>
@@ -45,15 +55,126 @@
                 </ul>
             </li>
             <li class="sidenav-item">
-                <a class="sidenav-link"><span>Category 2</span></a>
-                <ul class="sidenav-collapse">
+                <a class="sidenav-link" href="#三HTML文档结构分析"><span>三、HTML文档结构分析</span></a>
+                <ul class="sidenav-collapse show">
                     <li class="sidenav-item">
-                        <a class="sidenav-link">Link 4</a>
+                        <a class="sidenav-link" href="#31-html元素elements）">3.1 HTML元素（elements）</a>
                     </li>
                     <li class="sidenav-item">
-                        <a class="sidenav-link">Link 5</a>
+                        <a class="sidenav-link" href="#32-剖析一个-html-元素">3.2 剖析一个 HTML 元素</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#33-剖析-html-文档">3.3 剖析 HTML 文档</a>
                     </li>
                 </ul>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#四html文档相关说明"><span>四、HTML文档相关说明</span></a>
+                <ul class="sidenav-collapse show">
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#41-注释">4.1 注释</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#42-空元素">4.2 空元素</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="4.3 元素的属性">4.3 元素的属性</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#五标题"><span>五、标题</span></a>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#六文本格式"><span>六、文本格式</span></a>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#七超链接"><span>七、超链接</span></a>
+                <ul class="sidenav-collapse show">
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#71-超链接语法">7.1 超链接语法</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#72-锚点">7.2 锚点</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#八图片及文件路径"><span>八、图片及文件路径</span></a>
+                <ul class="sidenav-collapse show">
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#81-图片">8.1 图片</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#82-文件路径">8.2 文件路径</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#十列表"><span>十、列表</span></a>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#八图片及文件路径"><span>八、图片及文件路径</span></a>
+                <ul class="sidenav-collapse show">
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#101-无序列表">10.1 无序列表</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#102-有序列表">10.2 有序列表</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#十一表单"><span>十一、表单</span></a>
+                <ul class="sidenav-collapse show">
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#111-文本输入框">11.1 文本输入框</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#112-单选列表">11.2 单选列表</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#113-下拉列表">11.3 下拉列表</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#114-多选框">11.4 多选框</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#115-日期选择器">11.5 日期选择器</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#116-文件选择器">11.6 文件选择器</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#117-文本输入框">11.7 文本输入框</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#118-按钮">11.8 按钮</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#十二其他"><span>十二、其他</span></a>
+                <ul class="sidenav-collapse show">
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#121-区块元素">12.1 区块元素</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#122-内联元素">12.2 内联元素</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#123-预设格式">12.3 预设格式</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#124-特殊字符">12.4 特殊字符</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#十三学习过程遇到的一些问题"><span>十三、学习过程遇到的一些问题</span></a>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#参考链接"><span>参考链接</span></a>
             </li>
         </ul>
     </nav>
@@ -69,8 +190,8 @@
         <i class="fas fa-bars"></i>
     </button>
     <!-- Toggler -->
-    <div class='typora-export-content'>
-        <div id='write' class=''>
+    <div class=''>
+        <div id='write' class='bodyBackground'>
             <div class='md-toc' mdtype='toc'>
                 <p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1"
                         data-ref="n3"><a class="md-toc-inner" href="#前言">前言</a></span><span role="listitem"
@@ -160,7 +281,7 @@
             <p style="background-color:#3c9770;">"超文本"是指连接单个网站内或多个网站间的网页的链接。</p>
             <p><span style="color:green;"><span>HTML</span></span><span>定义了网页内容的含义和结构。正如前言所说，通常用来描述一个网页的表现与展示效果(</span><strong><span>CSS</span></strong><span>)，或者功能与行为(</span><strong><span>JavaScript</span></strong><span>)。</span></p>
             <p><span style="color:green"><span>HTML</span></span><span>是一种用于定义内容结构的标记语言而非编程语言，任何一个网页背后都是一个HTML文档，在网页中按</span><code>F12</code><span>或者右键便可以查看源代码即可查看源代码或者右键点击检查也可以在网页右边看到源代码（默认右边）。</span></p>
-            <p><img src="./Img/image-1.png" alt="image-20220513125039364" style="zoom: 33%;" /></p>
+            <p><img src="./Img/image-1.png" alt="image-1" style="zoom: 33%;" /></p>
             <p><span>百度百科也给出非常详细的解释：</span><a href='https://baike.baidu.com/item/HTML/97049?fr=aladdin'><span>HTML_百度百科(baidu.com)</span></a><span>，可以参考以下链接学习</span></p>
             <p><a href='https://www.runoob.com/html/html5-intro.html'><span>HTML5 教程 | 菜鸟教程 (runoob.com)</span></a></p>
             <p><a href='https://qige.io/web/brief-html/index.html#0'><span>HTML简介 (qige.io)</span></a></p>
@@ -259,7 +380,7 @@
             <p><span>检查我们刚创建的 HTML 文档你会发现，整个 HTML 就由一个个元素组成（可以嵌套），而元素则一般由一对标签（tag）构成。</span></p>
             <h2 id='32-剖析一个-html-元素'><span>3.2 剖析一个 HTML 元素</span></h2>
             <p><span>如下所示的一个用于展示段落的元素：</span></p>
-            <p><img src="https://qige.io/web/brief-html/img/f63738cc51ebfa14.png" referrerpolicy="no-referrer" alt="element"><span> </span></p>
+            <p><img src="https://qige.io/web/brief-html/img/f63738cc51ebfa14.png" referrerpolicy="no-referrer" alt="img-src1"></p>
             <ul>
                 <li><span>开始标签（Opening tag）：包含元素的名称（本例为 p)，被左、右角括号所包围。表示元素从这里开始或者开始起作用 —— 在本例中即段落由此开始。</span></li>
                 <li><span>结束标签（Closing tag）：与开始标签相似，只是其在元素名之前包含了一个斜杠。这表示着元素的结尾 ——在本例中即段落在此结束。初学者常常会犯忘记包含结束标签的错误，这可能会产生一些奇怪的结果。</span></li>
@@ -1758,12 +1879,12 @@
         </div>
     </div>
     <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-    <script src="./JS/main.js"></script>
+    <script src="./JS/cherryBlossom.js"></script>
     <script type="text/javascript" src="../JS/mdb.min.js"></script>
-    <script>
+    <!-- <script>
         const sidenavInstance = mdb.Sidenav.getInstance(document.getElementById('sidenav-1'));
         sidenavInstance.update({color:'warning'});
-    </script>
+    </script> -->
 </body>
 
 </html>
