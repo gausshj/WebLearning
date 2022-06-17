@@ -37,4 +37,10 @@ img:hover {
           align-items: center;
   top: 100px;
 }
+
+.btnFixed {
+  position: fixed;
+  right: 3rem;
+  top: 3rem;
+}
 /*# sourceMappingURL=main.css.map */
