@@ -4,12 +4,1722 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext'rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="./CSS/typora.css">
+    <link rel="stylesheet" href="../CSS/mdb.min.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+    <title>CSS学习总结</title>
+    <style>
+        body{
+            background-color:#fff3f332;
+            background-image: url(./Img/Background.webp);
+            background-position: center;
+            background-attachment:fixed;
+            background-size:cover;
+            background-repeat:no-repeat;
+        }
+    </style>
 </head>
 
 <body>
+        <!-- Sidenav -->
+        <nav id="sidenav-1" class="sidenav" data-mdb-hidden="true">
+            <ul class="sidenav-menu">
+                <li class="sidenav-item">
+                    <a class="sidenav-link"><span>前言</span></a>
+                    <ul class="sidenav-collapse show">
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#11-网页的组成">1.1 网页的组成</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#12-开发工具">1.2 开发工具</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="#一何为html"><span>一、何为html</span></a>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="#二HTML文档结构"><span>二、HTML文档结构</span></a>
+                    <ul class="sidenav-collapse show">
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#21-新建工作目录">2.1 新建工作目录</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#22-新建html文件">2.2 新建HTML文件</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#23-查看结果">2.3 查看结果</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="#三HTML文档结构分析"><span>三、HTML文档结构分析</span></a>
+                    <ul class="sidenav-collapse show">
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#31-html元素elements）">3.1 HTML元素（elements）</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#32-剖析一个-html-元素">3.2 剖析一个 HTML 元素</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#33-剖析-html-文档">3.3 剖析 HTML 文档</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="#四html文档相关说明"><span>四、HTML文档相关说明</span></a>
+                    <ul class="sidenav-collapse show">
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#41-注释">4.1 注释</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#42-空元素">4.2 空元素</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="4.3 元素的属性">4.3 元素的属性</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="#五标题"><span>五、标题</span></a>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="#六文本格式"><span>六、文本格式</span></a>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="#七超链接"><span>七、超链接</span></a>
+                    <ul class="sidenav-collapse show">
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#71-超链接语法">7.1 超链接语法</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#72-锚点">7.2 锚点</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="#八图片及文件路径"><span>八、图片及文件路径</span></a>
+                    <ul class="sidenav-collapse show">
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#81-图片">8.1 图片</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#82-文件路径">8.2 文件路径</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="#十列表"><span>十、列表</span></a>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="#八图片及文件路径"><span>八、图片及文件路径</span></a>
+                    <ul class="sidenav-collapse show">
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#101-无序列表">10.1 无序列表</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#102-有序列表">10.2 有序列表</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="#十一表单"><span>十一、表单</span></a>
+                    <ul class="sidenav-collapse show">
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#111-文本输入框">11.1 文本输入框</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#112-单选列表">11.2 单选列表</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#113-下拉列表">11.3 下拉列表</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#114-多选框">11.4 多选框</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#115-日期选择器">11.5 日期选择器</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#116-文件选择器">11.6 文件选择器</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#117-文本输入框">11.7 文本输入框</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#118-按钮">11.8 按钮</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="#十二其他"><span>十二、其他</span></a>
+                    <ul class="sidenav-collapse show">
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#121-区块元素">12.1 区块元素</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#122-内联元素">12.2 内联元素</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#123-预设格式">12.3 预设格式</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link" href="#124-特殊字符">12.4 特殊字符</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="#十三学习过程遇到的一些问题"><span>十三、学习过程遇到的一些问题</span></a>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="#参考链接"><span>参考链接</span></a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Sidenav -->
+    
+        <!-- Toggler -->
+        <button data-mdb-toggle="sidenav" 
+                data-mdb-target="#sidenav-1" 
+                class="btn btn-primary btnFixed" 
+                aria-controls="#sidenav-1" 
+                aria-haspopup="true"
+                >
+            <i class="fas fa-bars"></i>
+        </button>
+        <!-- Toggler -->
+    <div class=''>
+        <div id='write' class='bodyBackground'>
+            <div class='md-toc' mdtype='toc'>
+                <p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1"
+                        data-ref="n420"><a class="md-toc-inner" href="#一何为css">一、何为CSS</a></span><span role="listitem"
+                        class="md-toc-item md-toc-h1" data-ref="n430"><a class="md-toc-inner"
+                            href="#二css语法">二、CSS语法</a></span><span role="listitem" class="md-toc-item md-toc-h1"
+                        data-ref="n454"><a class="md-toc-inner" href="#三css如何生效">三、CSS如何生效</a></span><span
+                        role="listitem" class="md-toc-item md-toc-h2" data-ref="n463"><a class="md-toc-inner"
+                            href="#31-外部样式表">3.1 外部样式表</a></span><span role="listitem" class="md-toc-item md-toc-h2"
+                        data-ref="n473"><a class="md-toc-inner" href="#32-内部样式表">3.2 内部样式表</a></span><span
+                        role="listitem" class="md-toc-item md-toc-h2" data-ref="n479"><a class="md-toc-inner"
+                            href="#33-内联样式">3.3 内联样式</a></span><span role="listitem" class="md-toc-item md-toc-h2"
+                        data-ref="n486"><a class="md-toc-inner" href="#34-级联的优先级">3.4 级联的优先级</a></span><span
+                        role="listitem" class="md-toc-item md-toc-h1" data-ref="n497"><a class="md-toc-inner"
+                            href="#四颜色尺寸对其">四、颜色，尺寸、对其</a></span><span role="listitem" class="md-toc-item md-toc-h2"
+                        data-ref="n498"><a class="md-toc-inner" href="#41-颜色">4.1 颜色</a></span><span role="listitem"
+                        class="md-toc-item md-toc-h2" data-ref="n507"><a class="md-toc-inner" href="#42-尺寸">4.2
+                            尺寸</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n515"><a
+                            class="md-toc-inner" href="#43-对齐">4.3 对齐</a></span><span role="listitem"
+                        class="md-toc-item md-toc-h1" data-ref="n517"><a class="md-toc-inner"
+                            href="#五盒子模型">五、盒子模型</a></span><span role="listitem" class="md-toc-item md-toc-h1"
+                        data-ref="n535"><a class="md-toc-inner" href="#六边框和边距">六、边框和边距</a></span><span role="listitem"
+                        class="md-toc-item md-toc-h2" data-ref="n538"><a class="md-toc-inner" href="#61-边框">6.1
+                            边框</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n546"><a
+                            class="md-toc-inner" href="#62-边距">6.2 边距</a></span><span role="listitem"
+                        class="md-toc-item md-toc-h1" data-ref="n550"><a class="md-toc-inner"
+                            href="#七定位">七、定位</a></span><span role="listitem" class="md-toc-item md-toc-h2"
+                        data-ref="n574"><a class="md-toc-inner" href="#71-static">7.1 static</a></span><span
+                        role="listitem" class="md-toc-item md-toc-h2" data-ref="n576"><a class="md-toc-inner"
+                            href="#72-relative">7.2 relative</a></span><span role="listitem"
+                        class="md-toc-item md-toc-h2" data-ref="n582"><a class="md-toc-inner" href="#73-fixed">7.3
+                            fixed</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n587"><a
+                            class="md-toc-inner" href="#74-absolute">7.4 absolute</a></span><span role="listitem"
+                        class="md-toc-item md-toc-h1" data-ref="n595"><a class="md-toc-inner"
+                            href="#八溢出">八、溢出</a></span><span role="listitem" class="md-toc-item md-toc-h1"
+                        data-ref="n610"><a class="md-toc-inner" href="#九浮动">九、浮动</a></span><span role="listitem"
+                        class="md-toc-item md-toc-h1" data-ref="n620"><a class="md-toc-inner"
+                            href="#十不透明度">十、不透明度</a></span><span role="listitem" class="md-toc-item md-toc-h1"
+                        data-ref="n626"><a class="md-toc-inner" href="#十一组合选择器">十一、组合选择器</a></span><span role="listitem"
+                        class="md-toc-item md-toc-h2" data-ref="n628"><a class="md-toc-inner" href="#111-后代选择器">11.1
+                            后代选择器</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n634"><a
+                            class="md-toc-inner" href="#112-子选择器">11.2 子选择器</a></span><span role="listitem"
+                        class="md-toc-item md-toc-h1" data-ref="n640"><a class="md-toc-inner"
+                            href="#十二伪类和伪元素">十二、伪类和伪元素</a></span><span role="listitem" class="md-toc-item md-toc-h1"
+                        data-ref="n657"><a class="md-toc-inner" href="#十三scss">十三、SCSS</a></span><span role="listitem"
+                        class="md-toc-item md-toc-h1" data-ref="n664"><a class="md-toc-inner"
+                            href="#十四学习总结">十四、学习总结</a></span></p>
+            </div>
 
+
+            <h1 id='一何为css'><span>一、何为CSS</span></h1>
+            <p><span>如果把网页比作一个人的话，html就是他的骨架，而CSS是他的皮肤。</span><strong><span>CSS</span></strong><span>是级联样式表（CascadingStyle Sheets）的缩写。CSS决定了HTML的元素如何呈现，涉及许多方面，如整个页面的布局，元素的位置、距离、颜色、大小、是否显示、是否浮动、透明度等等。</span></p>
+            <p><span>在Internet早期阶段（CSS大量使用之前），页面的内容阅读感觉和阅读TXT文件一样。万维网联盟</span><a href='https://www.w3.org/'><span>W3C</span></a><span>（World Wide Web Consortium）意识到这个问题，然后推动了HTML和CSS的“分离”，人们开始可以把所有的布局和样式代码从HTML中移除放入到CSS中。</span></p>
+            <p><span>关于CSS的解释和说明可以参考下面</span></p>
+            <p><a href='https://baike.baidu.com/item/CSS/5457?fr=aladdin'><span>CSS（层叠样式表）_百度百科 (baidu.com)</span></a></p>
+            <p><a href='https://developer.mozilla.org/zh-CN/docs/Web/CSS'><span>CSS（层叠样式表） | MDN (mozilla.org)</span></a></p>
+            <p><span>关于CSS的学习可以参考下面的网站</span></p>
+            <p><a href='https://www.runoob.com/css/css-tutorial.html'><span>CSS 教程 | 菜鸟教程 (runoob.com)</span></a></p>
+            <p><a href='https://web.dev/learn/css/'><span>Learn CSS (web.dev)</span></a></p>
+            <p><span>还可以参考国内主流视频平台的教程视频来学习</span></p>
+
+
+            <h1 id='二css语法'><span>二、CSS语法</span></h1>
+            <p><span>CSS规则主要由两个主要的部分构成：选择器，以及一条或多条声明。选择器通常是需要改变样式的HTML元素；声明总以大括号</span><code>{}</code><span>括起来(每条说明由一个属性和一个值组成)；属性是希望设置的样式属性。如下例所示：</span></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="css">
+                <div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="css">
+                    <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;">
+                        <textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea>
+                    </div>
+                    <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+                    <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+                    <div class="CodeMirror-scroll" tabindex="-1">
+                        <div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;">
+                            <div style="position: relative; top: 0px;">
+                                <div class="CodeMirror-lines" role="presentation">
+                                    <div role="presentation" style="position: relative; outline: none;">
+                                        <div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+                                        <div class="CodeMirror-measure"></div>
+                                        <div style="position: relative; z-index: 1;"></div>
+                                        <div class="CodeMirror-code" role="presentation" style="">
+                                            <div class="CodeMirror-activeline" style="position: relative;">
+                                                <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                                                <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                                                <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/*这是个注释*/</span></span></pre>
+                                            </div>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/*建议每条申明占一行*/</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">p</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">text-align</span>:<span class="cm-atom">center</span>;</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">/*这是另一个注释*/</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">color</span>:<span class="cm-keyword">black</span>;</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">font-family</span>:<span class="cm-variable">arial</span>;</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 207px;"></div>
+                        <div class="CodeMirror-gutters" style="display: none; height: 207px;"></div>
+                    </div>
+                </div>
+            </pre>
+            <p><span>这里值得注意的是CSS注释以</span><code>/*</code><span>开始，以</span><code>*/</code><span>结束。</span></p>
+            <p><span style="font-size:18px"><span>选择器</span></span></p>
+            <p><span>一个页面上的元素众多，选择器就用于在页面中找到/选择需要应用这个样式的对象。主要有</span><code>id</code><span>和</span><code>class</code><span>选择器。其中</span><code>class</code><span>选择器使用非常普遍。</span></p>
+            <p><strong><span>id选择器</span></strong></p>
+            <p><span>id选择器可以为标有特定id的HTML元素指定特定的样式。HTML元素以id属性来设置id选择器，CSS中id选择器以</span><code>#</code><span>来定义。如下例所示：</span></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="css">
+                <div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="css">
+                    <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;">
+                        <textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea>
+                    </div>
+                    <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+                    <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+                    <div class="CodeMirror-scroll" tabindex="-1">
+                        <div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;">
+                            <div style="position: relative; top: 0px;">
+                                <div class="CodeMirror-lines" role="presentation">
+                                    <div role="presentation" style="position: relative; outline: none;">
+                                        <div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+                                        <div class="CodeMirror-measure"></div>
+                                        <div style="position: relative; z-index: 1;"></div>
+                                        <div class="CodeMirror-code" role="presentation" style="">
+                                            <div class="CodeMirror-activeline" style="position: relative;">
+                                                <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                                                <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                                                <pre class=" CodeMirror-line "
+                                                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">#para1</span></span></pre>
+                                            </div>
+                                            <pre class=" CodeMirror-line "
+                                                role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre>
+                                            <pre class=" CodeMirror-line "
+                                                role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">text-align</span>:<span class="cm-atom">center</span>;</span></pre>
+                                            <pre class=" CodeMirror-line "
+                                                role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">color</span>:<span class="cm-keyword">red</span>;</span></pre>
+                                            <pre class=" CodeMirror-line "
+                                                role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 115px;"></div>
+                        <div class="CodeMirror-gutters" style="display: none; height: 115px;"></div>
+                    </div>
+                </div>
+            </pre>
+            <blockquote>
+                <p><span>id属性不要以数字开头，数字开头的id在Mozilla/Firefox浏览器中不起作用。</span></p>
+            </blockquote>
+            <p><span>这条规则表明，找到页面上</span><code>id</code><span>为</span><code>para1</code><span>的那个元素让他文本居中并呈现红色。</span></p>
+            <blockquote>
+                <p><span>注意：在HTML中，元素的id值必须唯一，所以id选择器使用范围只有一个元素。</span></p>
+            </blockquote>
+            <p><strong><span>class选择器</span></strong></p>
+            <p><span>class选择器和上面的id选择器用法差不多，需要注意的是</span><code>class</code><span>选择器前面有</span><code>.</code><span>号</span></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="css">
+                <div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="css">
+                    <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;">
+                        <textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea>
+                    </div>
+                    <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+                    <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+                    <div class="CodeMirror-scroll" tabindex="-1">
+                        <div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;">
+                            <div style="position: relative; top: 0px;">
+                                <div class="CodeMirror-lines" role="presentation">
+                                    <div role="presentation" style="position: relative; outline: none;">
+                                        <div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+                                        <div class="CodeMirror-measure"></div>
+                                        <div style="position: relative; z-index: 1;"></div>
+                                        <div class="CodeMirror-code" role="presentation" style="">
+                                            <div class="CodeMirror-activeline" style="position: relative;">
+                                                <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                                                <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                                                <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/* 注意：class选择器前有 . 号。 */</span></span></pre>
+                                            </div>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-qualifier">.center</span>{</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-qualifier">.large</span>{</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">font-size</span>: <span class="cm-number">30px</span>;</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-qualifier">.red</span>{</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">color</span>: <span class="cm-keyword">red</span>;</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 230px;"></div>
+                    <div class="CodeMirror-gutters" style="display: none; height: 230px;"></div>
+                </div>
+                </div>
+            </pre>
+            <p><span>以上代码定义了三条规则，分别应用于页面上对应的元素，如只要页面上某元素</span><code>class</code><span>为</span><code>center</code><span>，就让文本居中，</span><code>class</code><span>为</span><code>large</code><span>，就让文字大小变为</span><code>30px</code><span>，</span><code>class</code><span>为</span><code>red</code><span>，那么就让它呈现红色。如下所示的页面：</span></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="html">
+                <div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="html">
+                    <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;">
+                        <textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea>
+                    </div>
+                    <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+                    <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+                    <div class="CodeMirror-scroll" tabindex="-1">
+                        <div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;">
+                            <div style="position: relative; top: 0px;">
+                                <div class="CodeMirror-lines" role="presentation">
+                                    <div role="presentation" style="position: relative; outline: none;">
+                                        <div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+                                        <div class="CodeMirror-measure"></div>
+                                        <div style="position: relative; z-index: 1;"></div>
+                                        <div class="CodeMirror-code" role="presentation">
+                                            <div class="CodeMirror-activeline" style="position: relative;">
+                                                <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                                                <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                                                <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"center"</span><span class="cm-tag cm-bracket">&gt;</span>我会居中显示的<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            </div>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"red"</span><span class="cm-tag cm-bracket">&gt;</span>我是红色的<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"center large red"</span><span class="cm-tag cm-bracket">&gt;</span>我又红又大还居中<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"red"</span><span class="cm-tag cm-bracket">&gt;</span>我也可以是红的<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 92px;"></div>
+                        <div class="CodeMirror-gutters" style="display: none; height: 92px;"></div>
+                    </div>
+                </div>
+            </pre>
+            <p class="codepen" data-height="300" data-theme-id="light" data-default-tab="html,result" data-slug-hash="GRQeXBo" data-user="gausshj" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/gausshj/pen/GRQeXBo">
+                Untitled</a> by Gausshj (<a href="https://codepen.io/gausshj">@gausshj</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <p><span>效果图如下图所示：</span></p>
+            <!-- <p><img src="C:\Users\ABC\AppData\Roaming\Typora\typora-user-images\image-20220530202652567.png" referrerpolicy="no-referrer" alt="image-20220530202652567"></p> -->
+            <p><img src="./Img/image-1.png" alt="image-1" style="zoom: 33%;" /></p>
+            <p><span>由上例可以看出，元素的</span><code>class</code><span>值可以多个，也可以重复，所以在实际应用中，</span><code>class</code><span>选择器应用非常普遍。</span></p>
+            <p><strong><span>效果展示：</span></strong></p>
+            <p><a href='https://gausshj.github.io/WebLearning/CSSLearning/CSSSyntax/ClassSelector/'><span>ClassSelector.html</span></a></p>
+
+
+            <h1 id='三css如何生效'><span>三、CSS如何生效</span></h1>
+            <p><span>插入样式表的方法有三种：</span></p>
+            <ul>
+                <li><span>外部样式表(External style sheet)</span></li>
+                <li><span>内部样式表(Internal style sheet)</span></li>
+                <li><span>内联样式(Inline style)</span></li>
+            </ul>
+            <h2 id='31-外部样式表'><span>3.1 外部样式表</span></h2>
+            <p><span>新建如下内容的一个HTML文件，输入以下内容：</span></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="html" style="break-inside: unset;">
+                <div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="html">
+                    <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;">
+                        <textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea>
+                    </div>
+                    <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+                    <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+                    <div class="CodeMirror-scroll" tabindex="-1">
+                        <div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;">
+                            <div style="position: relative; top: 0px;">
+                                <div class="CodeMirror-lines" role="presentation">
+                                    <div role="presentation" style="position: relative; outline: none;">
+                                        <div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+                                        <div class="CodeMirror-measure"></div>
+                                        <div style="position: relative; z-index: 1;"></div>
+                                        <div class="CodeMirror-code" role="presentation" style="">
+                                            <div class="CodeMirror-activeline" style="position: relative;">
+                                                <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                                                <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                                                <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">&lt;!DOCTYPE html&gt;</span></span></pre>
+                                            </div>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp=""></span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">meta</span> <span class="cm-attribute">charset</span>=<span class="cm-string">"utf-8"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">&lt;!-- 注意下面这个语句，将导入外部的 main.css 样式表文件 --&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">link</span> <span class="cm-attribute">rel</span>=<span class="cm-string">"stylesheet"</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text/css"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"./CSS/main.css"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">title</span><span class="cm-tag cm-bracket">&gt;</span>页面标题<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">title</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp=""></span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>我是有样式的<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">hr</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"haha"</span><span class="cm-tag cm-bracket">&gt;</span>还是有点丑：)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp=""></span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 392px;"></div>
+                        <div class="CodeMirror-gutters" style="display: none; height: 392px;"></div>
+                    </div>
+                </div>
+            </pre>
+            <p><span>然后在同一目录下创建</span><code>CSS</code><span>文件夹，然后新建一个样式表文件</span><code>main.css</code><span>，输入以下内容：</span></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="css" style="break-inside: unset;">
+                <div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="css">
+                    <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;">
+                        <textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea>
+                    </div>
+                    <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+                    <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+                    <div class="CodeMirror-scroll" tabindex="-1">
+                        <div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;">
+                            <div style="position: relative; top: 0px;">
+                                <div class="CodeMirror-lines" role="presentation">
+                                    <div role="presentation" style="position: relative; outline: none;">
+                                        <div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+                                        <div class="CodeMirror-measure"></div>
+                                        <div style="position: relative; z-index: 1;"></div>
+                                        <div class="CodeMirror-code" role="presentation" style="">
+                                            <div class="CodeMirror-activeline" style="position: relative;">
+                                                <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                                                <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                                                <pre class=" CodeMirror-line "
+                                                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">body</span> {</span></pre>
+                                            </div>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">background-color</span>: <span class="cm-keyword">linen</span>;</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp=""></span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">h1</span> {</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">color</span>: <span class="cm-keyword">red</span>;</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp=""></span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-qualifier">.haha</span> {</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">margin-top</span>: <span class="cm-number">100px</span>;</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">color</span>: <span class="cm-keyword">chocolate</span>;</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">font-size</span>: <span class="cm-number">50px</span>;</span></pre>
+                                            <pre class=" CodeMirror-line " ole="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 322px;"></div>
+                        <div class="CodeMirror-gutters" style="display: none; height: 322px;"></div>
+                    </div>
+                </div>
+            </pre>
+            <p class="codepen" data-height="300" data-theme-id="light" data-default-tab="html,result" data-slug-hash="vYdPzQO" data-user="gausshj" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/gausshj/pen/vYdPzQO">
+                Untitled</a> by Gausshj (<a href="https://codepen.io/gausshj">@gausshj</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <p><span>在浏览器中打开这个HTML文件便可以看到被修饰后的HTML文件。</span></p>
+            <p><strong><span>效果展示：</span></strong></p>
+            <p><a href='https://gausshj.github.io/WebLearning/CSSLearning/HowDoesTheCSSWork/ExternalStyleSheet/'><span>ExternalStyleSheet.html</span></a></p>
+            <blockquote>
+                <p><span>注意：一般我们会在项目目录下新建一个文件夹如</span><code>css</code><span>专门存放样式表文件，这样引入样式文件时路径就变为</span><code>./CSS/main.css</code><span>等。</span></p>
+            </blockquote>
+            <h2 id='32-内部样式表'><span>3.2 内部样式表</span></h2>
+            <p><span>除了将样式放在HTML外面，也可以将样式放在HTML文件中，这称为内部样式表。如：</span></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="html" style="break-inside: unset;">
+                <div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="html">
+                    <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;">
+                        <textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea>
+                    </div>
+                    <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+                    <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+                    <div class="CodeMirror-scroll" tabindex="-1">
+                        <div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;">
+                            <div style="position: relative; top: 0px;">
+                                <div class="CodeMirror-lines" role="presentation">
+                                    <div role="presentation" style="position: relative; outline: none;">
+                                        <div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+                                        <div class="CodeMirror-measure"></div>
+                                        <div style="position: relative; z-index: 1;"></div>
+                                        <div class="CodeMirror-code" role="presentation" style="">
+                                            <div class="CodeMirror-activeline" style="position: relative;">
+                                                <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                                                <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                                                <pre class=" CodeMirror-line "
+                                                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">&lt;!DOCTYPE html&gt;</span></span></pre>
+                                            </div>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp=""></span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">meta</span> <span class="cm-attribute">charset</span>=<span class="cm-string">"utf-8"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">&lt;!-- 注意下面这个语句，将导入外部的 mycss.css 样式表文件 --&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">link</span> <span class="cm-attribute">rel</span>=<span class="cm-string">"stylesheet"</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text/css"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"mycss.css"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">title</span><span class="cm-tag cm-bracket">&gt;</span>页面标题<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">title</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">style</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-tag">body</span> {</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">background-color</span>: <span class="cm-keyword">linen</span>;</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  }</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp=""></span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-tag">h1</span> {</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">color</span>: <span class="cm-keyword">red</span>;</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  }</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp=""></span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-qualifier">.haha</span> {</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">margin-top</span>: <span class="cm-number">100px</span>;</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">color</span>: <span class="cm-keyword">chocolate</span>;</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">font-size</span>: <span class="cm-number">50px</span>;</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  }</span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">style</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp=""></span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>我是有样式的<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">hr</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"haha"</span><span class="cm-tag cm-bracket">&gt;</span>还是有点丑：)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp=""></span></span></pre>
+                                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 760px;"></div>
+                        <div class="CodeMirror-gutters" style="display: none; height: 760px;"></div>
+                    </div>
+                </div>
+            </pre>
+            <p class="codepen" data-height="300" data-theme-id="light" data-default-tab="html,result" data-slug-hash="GRQeXPq" data-user="gausshj" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/gausshj/pen/GRQeXPq">
+                Untitled</a> by Gausshj (<a href="https://codepen.io/gausshj">@gausshj</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <p><span>该例子与上述例子一样的效果，但在</span><code>&lt;head&gt;</code><span>元素中引入了</span><code>&lt;style&gt;</code><span>标签，放入了样式。</span>
+            </p>
+            <p><strong><span>效果展示：</span></strong></p>
+            <p><a
+                    href='https://gausshj.github.io/WebLearning/CSSLearning/HowDoesTheCSSWork/InternalStyleSheet/'><span>InternalStyleSheet.html</span></a>
+            </p>
+            <h2 id='33-内联样式'><span>3.3 内联样式</span></h2>
+            <p><span>由于要将表现和内容混杂在一起，内联样式会损失掉样式表的许多优势。所谓内联样式，就是直接把样式规则写到要应用的元素中，如：</span></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="html">
+                <div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="html">
+                    <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;">
+                        <textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea>
+                    </div>
+                    <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+                    <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+                    <div class="CodeMirror-scroll" tabindex="-1">
+                        <div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;">
+                            <div style="position: relative; top: 0px;">
+                                <div class="CodeMirror-lines" role="presentation">
+                                    <div role="presentation" style="position: relative; outline: none;">
+                                        <div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+                                        <div class="CodeMirror-measure"></div>
+                                        <div style="position: relative; z-index: 1;"></div>
+                                        <div class="CodeMirror-code" role="presentation">
+                                            <div class="CodeMirror-activeline" style="position: relative;">
+                                                <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                                                <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                                                <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span> <span class="cm-attribute">style</span>=<span class="cm-string">"color:green;"</span><span class="cm-tag cm-bracket">&gt;</span>I am a heading<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div>
+                        <div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
+                    </div>
+                </div>
+            </pre>
+            <p class="codepen" data-height="300" data-theme-id="light" data-default-tab="html,result" data-slug-hash="yLvwxGj" data-user="gausshj" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/gausshj/pen/yLvwxGj">
+                Untitled</a> by Gausshj (<a href="https://codepen.io/gausshj">@gausshj</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <blockquote>
+                <p><span>注意：内联样式是最不灵活的一种方式，完全将内容和样式合在一起，实际应用中非常少见</span></p>
+            </blockquote>
+            <p><strong><span>效果展示：</span></strong></p>
+            <p><a href='https://gausshj.github.io/WebLearning/CSSLearning/HowDoesTheCSSWork/InlineStyle/'><span>InlineStyle.html</span></a></p>
+            <h2 id='34-级联的优先级'><span>3.4 级联的优先级</span></h2>
+            <p><span>如果某些属性在不同的样式表中被同样的选择器定义，那么属性值将从更具体的样式表中被继承过来。所以优先级从高到低分别是：</span></p>
+            <ol start=''>
+                <li><span>内联样式</span></li>
+                <li><span>内部样式表或外部样式表</span></li>
+                <li><span>浏览器缺省样式</span></li>
+            </ol>
+            <blockquote>
+                <p><span>总结：哪个样式表定义离元素的距离近，哪个就生效。</span></p>
+            </blockquote>
+
+
+            <h1 id='四颜色尺寸对其'><span>四、颜色，尺寸、对其</span></h1>
+            <h2 id='41-颜色'><span>4.1 颜色</span></h2>
+            <p><span>在网页中可以使用颜色名称或使用颜色RGB16进制值，来设定前景或背景的颜色，如：</span></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="html"
+                style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation" style="">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">&lt;!-- 颜色名称 --&gt;</span></span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span> <span class="cm-attribute">style</span>=<span class="cm-string">"background-color:Tomato;"</span><span class="cm-tag cm-bracket">&gt;</span>Tomato<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span> <span class="cm-attribute">style</span>=<span class="cm-string">"background-color:Orange;"</span><span class="cm-tag cm-bracket">&gt;</span>Orange<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span> <span class="cm-attribute">style</span>=<span class="cm-string">"background-color:DodgerBlue;"</span><span class="cm-tag cm-bracket">&gt;</span>DodgerBlue<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span> <span class="cm-attribute">style</span>=<span class="cm-string">"background-color:MediumSeaGreen;"</span><span class="cm-tag cm-bracket">&gt;</span>MediumSeaGreen<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span> <span class="cm-attribute">style</span>=<span class="cm-string">"background-color:Gray;"</span><span class="cm-tag cm-bracket">&gt;</span>Gray<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span> <span class="cm-attribute">style</span>=<span class="cm-string">"background-color:SlateBlue;"</span><span class="cm-tag cm-bracket">&gt;</span>SlateBlue<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span> <span class="cm-attribute">style</span>=<span class="cm-string">"background-color:Violet;"</span><span class="cm-tag cm-bracket">&gt;</span>Violet<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span> <span class="cm-attribute">style</span>=<span class="cm-string">"background-color:LightGray;"</span><span class="cm-tag cm-bracket">&gt;</span>LightGray<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">hr</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">&lt;!-- 颜色值，3个字节分别代表RGB（Red，Green，Blue）的0～255的值 --&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span> <span class="cm-attribute">style</span>=<span class="cm-string">"background-color:#ff0000;"</span><span class="cm-tag cm-bracket">&gt;</span>#ff0000<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span> <span class="cm-attribute">style</span>=<span class="cm-string">"background-color:#0000ff;"</span><span class="cm-tag cm-bracket">&gt;</span>#0000ff<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span> <span class="cm-attribute">style</span>=<span class="cm-string">"background-color:#3cb371;"</span><span class="cm-tag cm-bracket">&gt;</span>#3cb371<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span> <span class="cm-attribute">style</span>=<span class="cm-string">"background-color:#ee82ee;"</span><span class="cm-tag cm-bracket">&gt;</span>#ee82ee<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span> <span class="cm-attribute">style</span>=<span class="cm-string">"background-color:#ffa500;"</span><span class="cm-tag cm-bracket">&gt;</span>#ffa500<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span> <span class="cm-attribute">style</span>=<span class="cm-string">"background-color:#6a5acd;"</span><span class="cm-tag cm-bracket">&gt;</span>#6a5acd<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">&lt;!-- 文本颜色 --&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span> <span class="cm-attribute">style</span>=<span class="cm-string">"color:Tomato;"</span><span class="cm-tag cm-bracket">&gt;</span>Hello World<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">style</span>=<span class="cm-string">"color:DodgerBlue;"</span><span class="cm-tag cm-bracket">&gt;</span>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">style</span>=<span class="cm-string">"color:MediumSeaGreen;"</span><span class="cm-tag cm-bracket">&gt;</span>Ad facilis est ducimus rem consectetur, corporis omnis, eveniet esse dolor molestiae numquam odio corrupti, sed obcaecati praesentium accusamus? Tempora, dolor a?<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 507px;"></div>
+            <div class="CodeMirror-gutters" style="display: none; height: 507px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p><strong><span>效果展示：</span></strong></p>
+            <p><a
+                    href='https://gausshj.github.io/WebLearning/CSSLearning/Color,Size,Alignment/Color'><span>Color.html</span></a>
+            </p>
+            <p><span>网页设计中颜色的色彩搭配和使用都尤为重要，这里推荐几个色彩搭配的网站，有一些已经调配好的方案可以直接使用：</span></p>
+            <p><a href='https://colordrop.io/'><span>ColorDrop - New colors</span></a></p>
+            <p><a href='https://mycolor.space/'><span>ColorSpace - Color Palettes Generator and Color Gradient Tool
+                        (mycolor.space)</span></a></p>
+            <p><span>除了上述的网站还有很多免费、好用的网站，如果有补充的欢迎留言评论。</span></p>
+            <h2 id='42-尺寸'><span>4.2 尺寸</span></h2>
+            <p><span>我们可以使用</span><code>height</code><span>和</span><code>width</code><span>设定元素内容占据的尺寸。常见的单位有：像素</span><code>px</code><span>，百分比</span><code>%</code><span>，</span><code>rem</code><span>、</span><code>em</code><span>等。如：</span>
+            </p>
+            <p><code>HTML</code></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
+                lang="html"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation" style="">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">link</span> <span class="cm-attribute">rel</span>=<span class="cm-string">"stylesheet"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"./mycss.css"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"example-1"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  这个元素高 200 pixels，占据全部宽度</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"example-2"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  这个元素宽200像素,高300像素</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 299px;"></div>
+            <div class="CodeMirror-gutters" style="display: none; height: 299px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p><code>CSS</code></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
+                lang="css"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="css"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation" style="">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-qualifier">.example-1</span> {</span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">width</span>: <span class="cm-number">100%</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">height</span>: <span class="cm-number">200px</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">background-color</span>: <span class="cm-keyword">powderblue</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-qualifier">.example-2</span> {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">height</span>: <span class="cm-number">100px</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">width</span>: <span class="cm-number">500px</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">background-color</span>: <span class="cm-atom">rgb</span>(<span class="cm-number">73</span>, <span class="cm-number">138</span>, <span class="cm-number">60</span>);</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">text-align</span>: <span class="cm-atom">right</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 276px;"></div>
+            <div class="CodeMirror-gutters" style="display: none; height: 276px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p><strong><span>效果展示：</span></strong></p>
+            <p><a href='https://gausshj.github.io/WebLearning/CSSLearning/Color,Size,Alignment/Size'><span>Size.html</span></a>
+            </p>
+            <h2 id='43-对齐'><span>4.3 对齐</span></h2>
+            <p><span>对于</span><strong><span>元素中的文本</span></strong><span>，我们可以简单的设置</span><code>text-align</code><span>属性为</span><code>left, center, right</code><span>即可（显然缺省的是左对齐），上例中已有相关的应用。对于元素本身如何对齐，我们后面再学习。</span>
+            </p>
+
+
+            <h1 id='五盒子模型'><span>五、盒子模型</span></h1>
+            <p><span>所有HTML元素可以看作盒子，在CSS中，&quot;box
+                    model&quot;这一术语是用来设计和布局时使用。CSS盒子模型本质上是一个盒子，封装周围的HTML元素，它包括：边距、边框、填充和实际内容。盒子模型允许我们在其它元素和周围元素边框之间的空间放置元素。如下面的图片所示：</span>
+            </p>
+            <!-- <p><img src="D:\CSDN\Web\CSS学习总结\BoxModel.svg" alt="BoxModel" style="zoom:50%;" /></p> -->
+            <p><img src="./Img/BoxModel.svg" alt="BoxModel" style="zoom: 33%;"></p>
+            <p><span>上面的图片也可以在开发者工具中看到。</span></p>
+            <p><span>不同部分的说明：</span></p>
+            <ul>
+                <li><strong><span>Margin(外边距)</span></strong><span> - 清除边框外的区域，外边距是透明的。</span></li>
+                <li><strong><span>Border(边框)</span></strong><span> - 围绕在内边距和内容外的边框。</span></li>
+                <li><strong><span>Padding(内边距)</span></strong><span> - 清除内容周围的区域，内边距是透明的。</span></li>
+                <li><strong><span>Content(内容)</span></strong><span> - 盒子的内容，显示文本和图像。</span></li>
+            </ul>
+            <p><strong><span>效果展示：</span></strong></p>
+            <p><a href='https://gausshj.github.io/WebLearning/CSSLearning/BoxModel'><span>BoxModel.html</span></a></p>
+            <p><span>留意上图，你会发现一个元素真正占据的宽度应该是：</span>
+                <span>左外边距 + 左边框宽度 + 左内边距 + 内容宽度 + 右内边距 + 右边框宽度 + 右外边距</span>
+            </p>
+            <p><span>因此，我们在用</span><code>width</code><span>属性设置元素的宽度时，实际上只设置了其内容的宽度。</span></p>
+            
+            
+            <h1 id='六边框和边距'><span>六、边框和边距</span></h1>
+            <blockquote>
+                <p><span>无论边框、内边距还是外边距，他们都有上下左右四个方向。</span></p>
+            </blockquote>
+            <h2 id='61-边框'><span>6.1 边框</span></h2>
+            <p><span>试试下面的代码：</span></p>
+            <p><code>HTML</code></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
+                lang="html"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"example-1"</span><span class="cm-tag cm-bracket">&gt;</span>I have black borders on all sides.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"example-2"</span><span class="cm-tag cm-bracket">&gt;</span>I have a blue bottom border.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"example-3"</span><span class="cm-tag cm-bracket">&gt;</span>I have rounded grey borders.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"example-4"</span><span class="cm-tag cm-bracket">&gt;</span>I have a purple left border.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 92px;"></div>
+            <div class="CodeMirror-gutters" style="display: none; height: 92px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p><code>CSS</code></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
+                lang="css"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="css"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation" style="">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-qualifier">.example-1</span> {</span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">dotted</span> <span class="cm-keyword">black</span>; <span class="cm-comment">/* 上下左右都相同 */</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-qualifier">.example-2</span> {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">border-bottom</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-keyword">blue</span>; <span class="cm-comment">/* 只设置底部边框 */</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-qualifier">.example-3</span> {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-keyword">grey</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">border-radius</span>: <span class="cm-number">15px</span>; <span class="cm-comment">/* 边框圆角 */</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-qualifier">.example-4</span> {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">border-left</span>: <span class="cm-number">5px</span> <span class="cm-atom">solid</span> <span class="cm-keyword">purple</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 299px;"></div>
+            <div class="CodeMirror-gutters" style="display: none; height: 299px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p><strong><span>效果展示：</span></strong></p>
+            <p><a
+                    href='https://gausshj.github.io/WebLearning/CSSLearning/Borders&amp;Margins/Borders'><span>Borders.html</span></a>
+            </p>
+            <h2 id='62-边距'><span>6.2 边距</span></h2>
+            <p><span>下面的样式说明了内边距的设置：</span></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
+                lang="css"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="css"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation" style="">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">padding</span>: <span class="cm-number">20px</span>; <span class="cm-comment">/* 上下左右都相同 */</span></span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">padding-top</span>: <span class="cm-number">20px</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">padding-bottom</span>: <span class="cm-number">100px</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">padding-right</span>: <span class="cm-number">50px</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">padding-left</span>: <span class="cm-number">80px</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">padding</span>: <span class="cm-number">25px</span> <span class="cm-number">50px</span> <span class="cm-number">75px</span> <span class="cm-number">100px</span>; <span class="cm-comment">/* 简写形式，按上，右，下，左顺序设置 */</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">padding</span>: <span class="cm-number">25px</span> <span class="cm-number">10px</span>; <span class="cm-comment">/* 简写形式，上下为25px，左右为10px */</span></span></pre>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 161px;"></div>
+            <div class="CodeMirror-gutters" style="display: none; height: 161px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p><span>外边距与此类似。特别要注意的是其中的顺序是上右下左顺时针方向。</span></p>
+
+
+            <h1 id='七定位'><span>七、定位</span></h1>
+            <p><code>position</code><span>属性用于对元素进行定位。该属性有以下一些值：</span></p>
+            <figure>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style='text-align:center;'><span>元素名</span></th>
+                            <th style='text-align:center;'><span>说明</span></th>
+                            <th style='text-align:left;'><span>定义</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style='text-align:center;'><strong><span>static</span></strong></td>
+                            <td style='text-align:center;'><span>静态</span></td>
+                            <td style='text-align:left;'>
+                                <strong><span>默认属性：</span></strong><span>没有特别声明position或者声明position:static效果都一样——即按照元素在HTML出现的先后顺序从上到下从左到右进行元素位置的安排。</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style='text-align:center;'><strong><span>fixed</span></strong></td>
+                            <td style='text-align:center;'><span>相对</span></td>
+                            <td style='text-align:left;'>
+                                <strong><span>固定：</span></strong><span>相对于用户的视窗固定住元素的位置，比如它可以让一个元素永远待在你看到的页面的右下角。</span></td>
+                        </tr>
+                        <tr>
+                            <td style='text-align:center;'><strong><span>relative</span></strong></td>
+                            <td style='text-align:center;'><span>固定</span></td>
+                            <td style='text-align:left;'><strong><span>相对：</span></strong><span>相对于此元素的静态（static）位置用
+                                </span><code>top</code><span> ，</span><code>left</code><span> 等元素进行偏移</span></td>
+                        </tr>
+                        <tr>
+                            <td style='text-align:center;'><strong><span>absolute</span></strong></td>
+                            <td style='text-align:center;'><span>绝对</span></td>
+                            <td style='text-align:left;'>
+                                <strong><span>绝对：</span></strong><span>将使元素相对于其</span><strong><span>最近设置了定位属性（非static）的父元素</span></strong><span>进行偏移。如果该元素的所有父元素都没有设置定位属性，那么就相对于</span><strong><code>&lt;body&gt;</code></strong><span>这个父元素。</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </figure>
+            <p><span>设置了元素的</span><code>position</code><span>属性后，我们才能使用</span><code>top, bottom, left, right</code><span>属性，否则定位无效。</span>
+            </p>
+            <h2 id='71-static'><span>7.1 static</span></h2>
+            <p><span>设置为静态定位</span><code>position: static;</code><span>，这是元素的默认定位方式。这样设置后元素在
+                    HTML出现的先后顺序满足从上到下，从左到右进行元素的安排。</span></p>
+            <h2 id='72-relative'><span>7.2 relative</span></h2>
+            <p><span>设置为相对定位</span><code>position: relative;</code><span>，这将把元素相对于他的静态（正常）位置进行偏移</span></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
+                lang="html"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation" style="">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">&lt;!-- HTML --&gt;</span></span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"example-relative"</span><span class="cm-tag cm-bracket">&gt;</span>我偏移了正常显示的位置。去掉我的样式对比看看？<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">&lt;!-- CSS --&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">.example-relative {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  position: relative;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  left: 60px;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  top: 40px;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  background-color: rgb(173, 241, 241);</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 207px;"></div>
+            <div class="CodeMirror-gutters" style="display: none; height: 207px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p><strong><span>效果展示：</span></strong></p>
+            <p><a href='https://gausshj.github.io/WebLearning/CSSLearning/Position/Relative'><span>Relative.html</span></a></p>
+            <p><span>可以打开网页后，通过</span><code>F12</code><span>键查看元素，然后将</span><code>class</code><span>中的</span><code>example-relative</code><span>值删去，查看前后变化。</span>
+            </p>
+            <h2 id='73-fixed'><span>7.3 fixed</span></h2>
+            <p><span>设置为固定定位</span><code>position: fixed;</code><span>，这将使得元素固定不动（即使你上下左右拖动浏览器的滚动条）。此时元素固定的位置仍由</span><code>top, bottom, left, right</code><span>属性确定。对于一些需要固定的按钮、或者你在某些公司的网站上看到的客服图标等等都可以这样实现。</span>
+            </p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="html"
+                style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation" style="">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">&lt;!-- HTML --&gt;</span></span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"broad"</span><span class="cm-tag cm-bracket">&gt;</span>占位区域。请将浏览器窗口改变大小，看看右下角的按钮发生了什么？<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"example-fixed"</span><span class="cm-tag cm-bracket">&gt;</span>这个按钮是固定的<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">&lt;!-- CSS --&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">.example-fixed {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  position: fixed;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  bottom: 40px;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  right: 10px;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  padding: 6px 24px;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  border-radius: 4px;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  color: #fff;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  background-color: #9d0f0f;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  cursor: pointer;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.3), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">.broad {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  height: 5000px;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  width: 5000px;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  padding: 20px;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  background-color: darkkhaki;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 484px;"></div>
+            <div class="CodeMirror-gutters" style="display: none; height: 484px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p><strong><span>效果展示：</span></strong></p>
+            <p><a href='https://gausshj.github.io/WebLearning/CSSLearning/Position/Fixed'><span>Fixed.html</span></a></p>
+            <h2 id='74-absolute'><span>7.4 absolute</span></h2>
+            <p><span>设置为绝对定位</span><code>position: absolute;</code><span>，将使元素相对于其</span><strong><span>最近设置了定位属性（非static）的父元素</span></strong><span>进行偏移。如果该元素的所有父元素都没有设置定位属性，那么就相对于</span><code>&lt;body&gt;</code><span>这个父元素。</span>
+            </p>
+            <blockquote>
+                <p><strong><span>注意：</span></strong><span>
+                        绝对定位此处可能有些混淆，请留意其是仍是相对的，不过是相对</span><strong><span>最近的父元素</span></strong></p>
+            </blockquote>
+            <p><span>试试如下的代码：</span></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="html"
+                style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation" style="">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">&lt;!-- HTML --&gt;</span></span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"example-relative"</span><span class="cm-tag cm-bracket">&gt;</span>这是父元素，有 relative 定位属性</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"example-absolute"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  这是子元素，有 absolute 定位属性</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">&lt;!-- CSS --&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">.example-relative {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  position: relative;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  width: 400px;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  height: 200px;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  border: 3px solid rgb(87, 33, 173);</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">.example-absolute {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  position: absolute;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  top: 80px;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  right: 5px;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  width: 200px;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  height: 100px;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  border: 3px solid rgb(218, 73, 16);</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 484px;"></div>
+            <div class="CodeMirror-gutters" style="display: none; height: 484px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p><strong><span>效果展示：</span></strong></p>
+            <p><a href='https://gausshj.github.io/WebLearning/CSSLearning/Position/Absolute'><span>Absolute.html</span></a></p>
+            
+            
+            <h1 id='八溢出'><span>八、溢出</span></h1>
+            <p><span>当元素内容超过其指定的区域时，我们通过溢出</span><code>overflow</code><span>属性来处理这些溢出的部分。溢出属性有以下几个值：</span></p>
+            <ul>
+                <li><span>visible 默认值，溢出部分不被裁剪，在区域外面显示</span></li>
+                <li><span>hidden 裁剪溢出部分且不可见</span></li>
+                <li><span>scroll 裁剪溢出部分，但提供上下和左右滚动条供显示</span></li>
+                <li><span>auto 裁剪溢出部分，视情况提供滚动条</span></li>
+            </ul>
+            <p><span>对于滚动，我们还可以单独对上下或左右方向进行，如下代码所示：</span></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
+                lang="html"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation" style="">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">&lt;!-- HTML --&gt;</span></span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"example-overflow-scroll-y"</span><span class="cm-tag cm-bracket">&gt;</span>You can use the overflow property when you want to have better control of the</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  layout. The overflow property specifies what happens if content overflows an element's box.</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">&lt;!-- CSS --&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">.example-overflow-scroll-y {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  width: 200px;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  height: 100px;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  background-color: #eee;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  overflow-y: scroll;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 276px;"></div>
+            <div class="CodeMirror-gutters" style="display: none; height: 276px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p><strong><span>效果展示：</span></strong></p>
+            <p><a href='https://gausshj.github.io/WebLearning/CSSLearning/Overflow'><span>Overflow.html</span></a></p>
+            
+            
+            <h1 id='九浮动'><span>九、浮动</span></h1>
+            <p><span>在一个区域或容器内，我们可以设置</span><code>float</code><span>属性让某元素水平方向上向左或右进行移动，其周围的元素也会重新排列。</span>
+                <span>我们常用这种样式来使图像和文本进行合理布局，如我们希望有以下的效果：</span>
+            </p>
+            <!-- <p><img src="C:\Users\ABC\AppData\Roaming\Typora\typora-user-images\image-20220617094311796.png" referrerpolicy="no-referrer" alt="image-20220617094311796"></p> -->
+            <p><img src="./Img/image-2.png" alt="image-2" style="zoom: 33%;" /></p>
+            <p><span>让图片向右浮动即可，代码如下：</span></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="html"
+                style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation" style="">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">style</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-qualifier">.example-float-right</span> {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-property">float</span>: <span class="cm-atom">right</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">style</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://mdbootstrap.com/img/Photos/Others/placeholder1.jpg"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"example-float-right"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, architecto officiis, repellendus</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  corporis obcaecati, et commodi quam vitae vel laudantium omnis incidunt repellat qui eveniet fugiat totam</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">  modi nam vero!<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 345px;"></div>
+            <div class="CodeMirror-gutters" style="display: none; height: 345px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p><span>一个浮动元素会尽量向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。</span>
+                <span>浮动元素之后的元素将围绕它。</span>
+            </p>
+            <p><strong><span>效果展示：</span></strong></p>
+            <p><a href='https://gausshj.github.io/WebLearning/CSSLearning/Float'><span>Float.html</span></a></p>
+            <p><span>对于多张图片，如果没加样式的话，这几张图片将会从上到下依次显示。考虑使用左浮动，让它们水平依次显示。</span></p>
+            <p><span>一个元素浮动后，其后的元素将尽可能包围它，或者说出现在这个浮动元素的左或右方。如果希望浮动元素后面的元素在其下方显示，可使用</span><code>clear: both</code><span>样式来进行清除。</span>
+            </p>
+
+
+            <h1 id='十不透明度'><span>十、不透明度</span></h1>
+            <p><span>我们可以用</span><code>opacity</code><span>对任何元素（不过常用于图片）设置不透明度。值在[0.0～1.0]之间，值越低，透明度越高。</span></p>
+            <!-- <p><img src="C:\Users\ABC\AppData\Roaming\Typora\typora-user-images\image-20220617094848262.png" referrerpolicy="no-referrer" alt="image-20220617094848262"></p> -->
+            <p><img src="./Img/image-3.png" alt="image-3" style="zoom: 33%;" /></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="html"
+                style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation" style="">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">&lt;!DOCTYPE html&gt;</span></span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">html</span> <span class="cm-attribute">lang</span>=<span class="cm-string">"en"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+        </span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">meta</span> <span class="cm-attribute">charset</span>=<span class="cm-string">"UTF-8"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">meta</span> <span class="cm-attribute">http-equiv</span>=<span class="cm-string">"X-UA-Compatible"</span> <span class="cm-attribute">content</span>=<span class="cm-string">"IE=edge"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">meta</span> <span class="cm-attribute">name</span>=<span class="cm-string">"viewport"</span> <span class="cm-attribute">content</span>=<span class="cm-string">"width=device-width, initial-scale=1.0"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">title</span><span class="cm-tag cm-bracket">&gt;</span>Document<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">title</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">style</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-tag">img</span> {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">width</span>: <span class="cm-number">25%</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">border-radius</span>: <span class="cm-number">10px</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">float</span>: <span class="cm-atom">left</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">margin</span>: <span class="cm-number">10px</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  }</span></pre>
+                <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+        </span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-qualifier">.opacity-2</span> {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">opacity</span>: <span class="cm-number">0.2</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  }</span></pre>
+                <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+        </span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-qualifier">.opacity-5</span> {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">opacity</span>: <span class="cm-number">0.5</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  }</span></pre>
+                <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+        </span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-qualifier">.opacity-10</span> {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">opacity</span>: <span class="cm-number">1</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  }</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">style</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+        </span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">class</span>=<span class="cm-string">"opacity-2"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(87).jpg"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">class</span>=<span class="cm-string">"opacity-5"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(87).jpg"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">class</span>=<span class="cm-string">"opacity-10"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(87).jpg"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+        </span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 852px;"></div>
+            <div class="CodeMirror-gutters" style="display: none; height: 852px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p><strong><span>效果展示：</span></strong></p>
+            <p><a href='https://gausshj.github.io/WebLearning/CSSLearning/Opacity'><span>Opacity.html</span></a></p>
+            <h1 id='十一组合选择器'><span>十一、组合选择器</span></h1>
+            <p><span>前面我们学习了 CSS有三种选择器：元素、id 和 class 。但我们也可以进行组合，以得到简洁精确的选择。</span>
+                <span>下面我们介绍两种组合选择器。</span>
+            </p>
+            <h2 id='111-后代选择器'><span>11.1 后代选择器</span></h2>
+            <p><span>以空格作为分隔，如：</span><code>.haha p</code><span>
+                    代表在</span><code>div</code><span>元素内有</span><code>.haha</code><span>这种类的所有元素。</span>
+                <span>参见如下代码：</span>
+            </p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="html"
+                style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation" style="">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">style</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-qualifier">.haha</span> <span class="cm-tag">p</span> {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-property">background-color</span>: <span class="cm-keyword">yellow</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">style</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"haha"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Paragraph 1 in the div .haha.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Paragraph 2 in the div .haha&gt;.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Paragraph 3 in the div .haha.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Paragraph 4. Not in a div .haha.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Paragraph 5. Not in a div .haha.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 461px;"></div>
+            <div class="CodeMirror-gutters" style="display: none; height: 461px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p><span>段落1、2、3都将有黄色的背景，而段落4、5没有。</span></p>
+            <p><strong><span>效果展示：</span></strong></p>
+            <p><a
+                    href='https://gausshj.github.io/WebLearning/CSSLearning/CombinatorialSelector/DescendantSelector'><span>DescendantSelector.html</span></a>
+            </p>
+            <h2 id='112-子选择器'><span>11.2 子选择器</span></h2>
+            <p><span>也称为直接后代选择器，以</span><code>&gt;</code><span>作为分隔，如：</span><code>.haha &gt; p</code><span>
+                    代表在有</span><code>.haha</code><span>类的元素内的直接</span><code>&lt;p&gt;</code><span>元素。</span>
+                <span>参见如下代码：</span>
+            </p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="html"
+                style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation" style="">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">style</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-qualifier">.haha</span> &gt; <span class="cm-tag">p</span> {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-property">background-color</span>: <span class="cm-keyword">yellow</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">style</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"haha"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Paragraph 1 in the div .haha.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Paragraph 2 in the div .haha.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Paragraph 3 in the div .haha - it is descendant but not immediate child.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-comment">&lt;!-- not Child but Descendant --&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Paragraph 4. Not in a div .haha.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Paragraph 5. Not in a div .haha.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 461px;"></div>
+            <div class="CodeMirror-gutters" style="display: none; height: 461px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p><span>虽然段落3在</span><code>.haha</code><span>类中，但它的直接父元素是</span><code>span</code><span>，不是</span><code>.haha</code><span>的直接后代，所以不能选择。只有段落1、2有黄色背景。</span>
+            </p>
+            <p><strong><span>效果展示：</span></strong></p>
+            <p><a
+                    href='https://gausshj.github.io/WebLearning/CSSLearning/CombinatorialSelector/ChildSelector'><span>ChildSelector.html</span></a>
+            </p>
+            <h1 id='十二伪类和伪元素'><span>十二、伪类和伪元素</span></h1>
+            <p><span>伪类（pseudo-class）或伪元素（pseudo-element）用于定义元素的某种特定的状态或位置等。</span>
+                <span>比如我们可能有这样的需求：</span>
+            </p>
+            <ul>
+                <li><span>鼠标移到某元素上变换背景颜色</span></li>
+                <li><span>超链接访问前后访问后样式不同</span></li>
+                <li><span>离开必须填写的输入框时出现红色的外框进行警示</span></li>
+                <li><span>保证段落的第一行加粗，其它正常</span></li>
+                <li><span>...</span></li>
+            </ul>
+            <p><span>使用伪类/伪元素的语法如下：</span></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
+                lang="css"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="css"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/* 选择器后使用 : 号，再跟上某个伪类/伪元素 */</span></span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">selector</span>:<span class="cm-variable-3">pseudo-class</span>/<span class="cm-tag">pseudo-element</span> {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property cm-error">property</span>:<span class="cm-variable">value</span>;</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 92px;"></div>
+            <div class="CodeMirror-gutters" style="display: none; height: 92px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p><span>以下是常用的伪类/伪元素的简单使用：</span></p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
+                lang="css"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="css"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation" style="">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">a</span>:<span class="cm-variable-3">link</span> {<span class="cm-property">color</span>:<span class="cm-atom">#FF0000</span>;} &nbsp; &nbsp; <span class="cm-comment">/* 未访问的链接 */</span></span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">a</span>:<span class="cm-variable-3">visited</span> {<span class="cm-property">color</span>:<span class="cm-atom">#00FF00</span>;} &nbsp;<span class="cm-comment">/* 已访问的链接 */</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">a</span>:<span class="cm-variable-3">hover</span> {<span class="cm-property">color</span>:<span class="cm-atom">#FF00FF</span>;} &nbsp; &nbsp;<span class="cm-comment">/* 鼠标划过链接 */</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/* 鼠标移到段落则改变背景颜色 */</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">p</span>:<span class="cm-variable-3">hover</span> {<span class="cm-property">background-color</span>: <span class="cm-atom">rgb</span>(<span class="cm-number">226</span>, <span class="cm-number">43</span>, <span class="cm-number">144</span>);}</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">p</span>:<span class="cm-variable-3">first-line</span>{<span class="cm-property">color</span>:<span class="cm-keyword">blue</span>;} &nbsp; <span class="cm-comment">/* 段落的第一行显示蓝色 */</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">p</span>:<span class="cm-variable-3">first-letter</span>{<span class="cm-property">font-size</span>: <span class="cm-atom">xx-large</span>;} &nbsp; <span class="cm-comment">/* 段落的第一个字超大 */</span></span></pre>
+                <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+        </span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">h1</span>:<span class="cm-variable-3">before</span> { <span class="cm-property">content</span>:<span class="cm-atom">url</span>(<span class="cm-string">smiley.gif</span>); } <span class="cm-comment">/* 在每个一级标题前插入该图片 */</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">h1</span>:<span class="cm-variable-3">after</span> { <span class="cm-property">content</span>:<span class="cm-atom">url</span>(<span class="cm-string">smiley.gif</span>); } <span class="cm-comment">/* 在每个一级标题后插入该图片 */</span></span></pre>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 230px;"></div>
+            <div class="CodeMirror-gutters" style="display: none; height: 230px;"></div>
+            </div>
+            </div>
+            </pre>
+            <h1 id='十三scss'><span>十三、SCSS</span></h1>
+            <p><span>在百度搜索</span><code>scss</code><span>，可以看到以下解释：</span></p>
+            <blockquote>
+                <p><strong><span>Sass</span></strong><span>（英文全称：</span><strong><span>S</span></strong><span>yntactically
+                    </span><strong><span>A</span></strong><span>wesome
+                    </span><strong><span>S</span></strong><span>tyle</span><strong><span>s</span></strong><span>heets）是一个最初由Hampton
+                        Catlin设计并由Natalie Weizenbaum开发的层叠样式表语言。在开发最初版本之后，Weizenbaum和Chris
+                        Eppstein继续通过SassScript来继续扩充Sass的功能。SassScript是一个在Sass文件中使用的小型脚本语言。</span></p>
+                <p><span>Sass是一个将脚本解析成</span><a
+                        href='https://baike.baidu.com/item/CSS/5457'><span>CSS</span></a><span>的</span><a
+                        href='https://baike.baidu.com/item/脚本语言/1379708'><span>脚本语言</span></a><span>，即SassScript。Sass包括两套</span><a
+                        href='https://baike.baidu.com/item/语法/23734941'><span>语法</span></a><span>。最开始的语法叫做“缩进语法”，与</span><a
+                        href='https://baike.baidu.com/item/Haml/292325'><span>Haml</span></a><span>类似，使用缩进来区分代码块，并且用回车将不同规则分隔开。而较新的语法叫做“SCSS”，使用和CSS一样的块语法，即使用大括号将不同的规则分开，使用分号将具体的样式分开。通常情况下，这两套语法通过.sass和.scss两个</span><a
+                        href='https://baike.baidu.com/item/文件扩展名'><span>文件扩展名</span></a><span>区分开。</span></p>
+            </blockquote>
+            <p><span>可以在它的中文官网</span><a href='https://www.sass.hk/'><span>Sass世界上最成熟、稳定和强大的CSS扩展语言 |
+                        Sass中文网</span></a><span>或者英语官网</span><a href='https://sass-lang.com/'><span>Sass: Syntactically Awesome
+                        Style Sheets (sass-lang.com)</span></a><span>上找到相关资料。</span></p>
+            <p><span>在VSCode中使用</span><code>SCSS</code><span>可以下载</span><code>Live Sass Compiler</code><span>将</span><code>SCSS</code><span>文件实时转译成</span><code>CSS</code><span>文件。</span>
+            </p>
+            <h1 id='十四学习总结'><span>十四、学习总结</span></h1>
+            <p><span>通过以上的学习，已经基本掌握了</span><code>CSS</code><span>的基本语法和基本使用方法，对于更深程度的学习可以学习</span><code>Bootstrap</code><span>、</span><code>MDBootstrap</code><span>、</span><code>Tailwind</code><span>等样式表装饰我们的网页。</span>
+            </p>
+            <p><a href='https://getbootstrap.net/'><span>Bootstrap中文网 | bootstrap 4 中文文档 (getbootstrap.net)</span></a></p>
+            <p><a href='https://mdbootstrap.com/'><span>MDB - Material Design for Bootstrap 5 &amp; 4 (mdbootstrap.com)</span></a></p>
+            <p><a href='https://www.tailwindcss.cn/'><span>Tailwind CSS 中文文档 - 无需离开您的HTML，即可快速建立现代网站。</span></a></p>
+            <p><span>对于字体可以使用Google Fonts，图标可以使用Font Awesome等。</span></p>
+            <p><a href='https://fonts.google.com/'><span>Browse Fonts - Google Fonts</span></a></p>
+            <p><a href='https://fontawesome.com/'><span>Font Awesome</span></a></p>
+        </div>
+    </div>
+
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+    <script src="./JS/cherryBlossom.js"></script>
+    <script type="text/javascript" src="../JS/mdb.min.js"></script>
 </body>
 
 </html>
