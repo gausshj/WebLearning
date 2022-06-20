@@ -1,0 +1,770 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width initial-scale=1'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="./CSS/typora.css">
+    <link rel="stylesheet" href="../CSS/mdb.min.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+    <title>HTML学习总结</title>
+    <style>
+        body{
+            background-color:#fff3f332;
+            background-image: url(./Img/Background.webp);
+            background-position: center;
+            background-attachment:fixed;
+            background-size:cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sidenav -->
+    <nav id="sidenav-1" class="sidenav" data-mdb-hidden="true">
+        <ul class="sidenav-menu">
+            <li class="sidenav-item">
+                <a class="sidenav-link"><span>前言</span></a>
+                <ul class="sidenav-collapse show">
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#11-网页的组成">1.1 网页的组成</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#12-开发工具">1.2 开发工具</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#一何为html"><span>一、何为html</span></a>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#二HTML文档结构"><span>二、HTML文档结构</span></a>
+                <ul class="sidenav-collapse show">
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#21-新建工作目录">2.1 新建工作目录</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#22-新建html文件">2.2 新建HTML文件</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#23-查看结果">2.3 查看结果</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#三HTML文档结构分析"><span>三、HTML文档结构分析</span></a>
+                <ul class="sidenav-collapse show">
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#31-html元素elements）">3.1 HTML元素（elements）</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#32-剖析一个-html-元素">3.2 剖析一个 HTML 元素</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#33-剖析-html-文档">3.3 剖析 HTML 文档</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#四html文档相关说明"><span>四、HTML文档相关说明</span></a>
+                <ul class="sidenav-collapse show">
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#41-注释">4.1 注释</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#42-空元素">4.2 空元素</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="4.3 元素的属性">4.3 元素的属性</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#五标题"><span>五、标题</span></a>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#六文本格式"><span>六、文本格式</span></a>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#七超链接"><span>七、超链接</span></a>
+                <ul class="sidenav-collapse show">
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#71-超链接语法">7.1 超链接语法</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#72-锚点">7.2 锚点</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#八图片及文件路径"><span>八、图片及文件路径</span></a>
+                <ul class="sidenav-collapse show">
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#81-图片">8.1 图片</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#82-文件路径">8.2 文件路径</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#十列表"><span>十、列表</span></a>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#八图片及文件路径"><span>八、图片及文件路径</span></a>
+                <ul class="sidenav-collapse show">
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#101-无序列表">10.1 无序列表</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#102-有序列表">10.2 有序列表</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#十一表单"><span>十一、表单</span></a>
+                <ul class="sidenav-collapse show">
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#111-文本输入框">11.1 文本输入框</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#112-单选列表">11.2 单选列表</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#113-下拉列表">11.3 下拉列表</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#114-多选框">11.4 多选框</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#115-日期选择器">11.5 日期选择器</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#116-文件选择器">11.6 文件选择器</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#117-文本输入框">11.7 文本输入框</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#118-按钮">11.8 按钮</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#十二其他"><span>十二、其他</span></a>
+                <ul class="sidenav-collapse show">
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#121-区块元素">12.1 区块元素</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#122-内联元素">12.2 内联元素</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#123-预设格式">12.3 预设格式</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="#124-特殊字符">12.4 特殊字符</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#十三学习过程遇到的一些问题"><span>十三、学习过程遇到的一些问题</span></a>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#参考链接"><span>参考链接</span></a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Sidenav -->
+
+    <!-- Toggler -->
+    <button data-mdb-toggle="sidenav" 
+            data-mdb-target="#sidenav-1" 
+            class="btn btn-primary btnFixed" 
+            aria-controls="#sidenav-1" 
+            aria-haspopup="true"
+            >
+        <i class="fas fa-bars"></i>
+    </button>
+    <!-- Toggler -->
+
+    <div class=''>
+        <div  id='write' class='bodyBackground'>
+            <div class='md-toc' mdtype='toc'>
+                <p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1"
+                        data-ref="n3"><a class="md-toc-inner" href="#一javascript学习总结">一、JavaScript学习总结</a></span><span
+                        role="listitem" class="md-toc-item md-toc-h2" data-ref="n5"><a class="md-toc-inner"
+                            href="#11-环境配置">1.1 环境配置</a></span><span role="listitem" class="md-toc-item md-toc-h2"
+                        data-ref="n11"><a class="md-toc-inner" href="#12-基本语法">1.2 基本语法</a></span><span role="listitem"
+                        class="md-toc-item md-toc-h2" data-ref="n60"><a class="md-toc-inner" href="#13-操作符">1.3
+                            操作符</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n77"><a
+                            class="md-toc-inner" href="#14-语句">1.4 语句</a></span><span role="listitem"
+                        class="md-toc-item md-toc-h2" data-ref="n92"><a class="md-toc-inner" href="#15-函数">1.5
+                            函数</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n105"><a
+                            class="md-toc-inner" href="#16-对象">1.6 对象</a></span><span role="listitem"
+                        class="md-toc-item md-toc-h2" data-ref="n111"><a class="md-toc-inner" href="#17-数组">1.7
+                            数组</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n115"><a
+                            class="md-toc-inner" href="#18-链式语法">1.8 链式语法</a></span><span role="listitem"
+                        class="md-toc-item md-toc-h2" data-ref="n118"><a class="md-toc-inner" href="#19-闭包">1.9
+                            闭包</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n122"><a
+                            class="md-toc-inner" href="#二typescript学习总结">二、TypeScript学习总结</a></span><span
+                        role="listitem" class="md-toc-item md-toc-h2" data-ref="n123"><a class="md-toc-inner"
+                            href="#21-typescript简介">2.1 TypeScript简介</a></span><span role="listitem"
+                        class="md-toc-item md-toc-h2" data-ref="n138"><a class="md-toc-inner" href="#22-let和const">2.2
+                            let和const</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n143"><a
+                            class="md-toc-inner" href="#23-解构">2.3 解构</a></span><span role="listitem"
+                        class="md-toc-item md-toc-h2" data-ref="n149"><a class="md-toc-inner" href="#24-函数">2.4
+                            函数</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n152"><a
+                            class="md-toc-inner" href="#25-类">2.5 类</a></span><span role="listitem"
+                        class="md-toc-item md-toc-h2" data-ref="n157"><a class="md-toc-inner" href="#26-模块">2.6
+                            模块</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n162"><a
+                            class="md-toc-inner" href="#三总结">三、总结</a></span><span role="listitem"
+                        class="md-toc-item md-toc-h1" data-ref="n164"><a class="md-toc-inner"
+                            href="#四参考链接">四、参考链接</a></span></p>
+            </div>
+            <h1 id='一javascript学习总结'><span>一、JavaScript学习总结</span></h1>
+            <p><span>JavaScript 是互联网上最流行的脚本语言，这门语言可用于 HTML 和 web，更可广泛用于服务器、PC、笔记本电脑、平板电脑和智能手机等设备。</span></p>
+            <h2 id='11-环境配置'><span>1.1 环境配置</span></h2>
+            <p><span>和其他语言一样，JavaScript作为编程语言，需要环境来运行。对于JavaScript语言，可以在浏览器中运行，打开浏览器，点击键盘上的</span><code>F12</code><span>按钮，或者右键点击</span><code>检查</code><span>，接下来点击</span><code>控制台</code><span>或</span><code>console</code><span>，可以看到下面的窗口，在窗口中输入JavaScript命名便可以执行。</span>
+            </p>
+            <!-- <p><img src="C:\Users\ABC\AppData\Roaming\Typora\typora-user-images\image-20220619222035049.png" referrerpolicy="no-referrer" alt="image-20220619222035049"></p> -->
+            <p><img src="./Img/image-1.png" alt="image-1" style="zoom: 33%;" /></p>
+            <p><span>如果想要在WebStorm或者VSCode中运行需要下载Node.js解释执行JavaScript程序。Node.js下载地址如下：</span></p>
+            <p><a href='https://nodejs.org/zh-cn/' target="_blank"><span>Node.js (nodejs.org)</span></a></p>
+            <p><span>下载后安装，建议将安装目录添加到环境变量中。</span></p>
+            <h2 id='12-基本语法'><span>1.2 基本语法</span></h2>
+            <p><b><span>标识符</span></b></p>
+            <p><span>JavaScript是一个大小写敏感的语言，对于标识符（变量、函数、属性的名字，或者函数的参数）的使用，需要注意：</span></p>
+            <blockquote>
+                <ol start=''>
+                    <li><span>第一个字符只能是字母、下划线（ _ ）或美元符号（ $ ）之一；</span></li>
+                    <li><span>其他字符可以是字母、下划线、美元符号或数字；</span></li>
+                    <li><span>标识符采用
+                        </span><strong><span>驼峰</span></strong><span>大小写格式，也就是第一个字母小写，剩下的每个单词的首字母大写，如</span><code>getNameById</code>
+                    </li>
+                </ol>
+            </blockquote>
+            <p><b><span>注释</span></b></p>
+            <ul>
+                <li><span>单行注释：以</span><code>//</code><span>开头</span></li>
+                <li><span>多行注释：以</span><code>/*</code><span>开头，</span><code>*/</code><span>结尾</span></li>
+            </ul>
+            <p><b><span>语句</span></b></p>
+            <p><span>语句后的分号可以添加，也可以不添加，建议添加</span></p>
+            <p><b><span>保留字</span></b></p>
+            <p><span>在 JavaScript 中，一些标识符是保留关键字，不能用作变量名或函数名，或者说是 JavaScript 语言内部预备使用的一组名字（或称为命令）。这些名字目前还没有具体的用途，是为
+                    JavaScript 升级版本预留备用的，建议用户不要使用。</span></p>
+            <p><span>ECMAScript 3 将 Java 所有关键字都列为保留字，而 ECMAScript 5 规定较为灵活，例如：</span></p>
+            <ul>
+                <li><span>在非严格模式下，仅规定 class、const、enums、export、extends、import、super 为保留字，其他 ECMAScript 3
+                        保留字可以自由使用；</span></li>
+                <li><span>在严格模式下，ECMAScript 5 变得更加谨慎，严格限制
+                        implements、interface、let、package、private、protected、public、static、yield、eval（非保留字）、arguments（非保留字）的使用。</span>
+                </li>
+            </ul>
+            <p><span>JavaScript 预定义了很多全局变量和函数，用户也应该避免使用它们。</span></p>
+            <blockquote>
+                <p><span>不同的 JavaScript 运行环境都会预定义一些全局变量和函数，上表列出的仅针对 Web 浏览器运行环境。</span></p>
+            </blockquote>
+            <p><span>无论是在严格模式下还是在非严格模式下，都不要在定义变量名、函数名或者属性名时使用上面列举出的保留字。</span></p>
+            <p><span>保留关键字信息可以参考：</span><a href='https://www.runoob.com/js/js-reserved.html' target="_blank"><span>JavaScript 保留关键字 |
+                        菜鸟教程 (runoob.com)</span></a></p>
+            <p><b><span>变量</span></b></p>
+            <p><span>变量是用于存储信息的&quot;容器&quot;。JavaScript变量是松散类型的，可以保存任何类型的数据。定义变量时需要用</span><code>var</code><span>，该变量在C#语言中也有。</span><code>var</code><span>操作符定义的变量可以用来保存任何值，例如：</span>
+            </p>
+            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
+                lang="javascript"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="javascript"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">var</span> <span class="cm-def">message</span> <span class="cm-operator">=</span> <span class="cm-string">'Hi, JavaScript'</span>;</span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">message</span>);</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">message</span> <span class="cm-operator">=</span> <span class="cm-number">100</span>;</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">message</span>);</span></pre>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 92px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 92px;"></div>
+    </div>
+    </div>
+    </pre>
+    <p><span>和C#语法类似， </span><code>var</code><span> 操作符定义的变量将成为定义该变量的作用域中的局部变量。也就是说，如果在函数中使用
+        </span><code>var</code><span> 定义一个变量，那么这个变量在函数退出后就会被销毁。</span></p>
+    <blockquote>
+        <p><span>虽然省略 </span><code>var</code><span> 操作符可以定义全局变量，但这也不是我们推荐的做法。因为在局部作用域中定义的全局变量很难维护。</span></p>
+    </blockquote>
+    <p><span>设置全局变量有三种方法：</span></p>
+    <ol start=''>
+        <li><span>在js的function外定义一个变量；</span></li>
+        <li><span>不使用var，直接给定义变量，隐式的声明了全局变量</span></li>
+        <li><span>使用window.变量名定义为全局变量，但是注意：调用时候建议写上window.变量名，当然也可以不写；我们常用的document.getXXX的document对象就是window的</span>
+        </li>
+    </ol>
+    <p><span>参考链接：</span></p>
+    <p><a href='https://www.runoob.com/js/js-scope.html' target="_blank"><span>JavaScript 作用域 | 菜鸟教程 (runoob.com)</span></a></p>
+    <p><a href='https://m.php.cn/article/480262.html' target="_blank"><span>javascript如何设置全局变量-js教程-PHP中文网</span></a></p>
+    <h2 id='13-操作符'><span>1.3 操作符</span></h2>
+    <p><span>操作符和C语言的操作符类似，主要有以下几类：</span></p>
+    <ul>
+        <li><span>一元操作符 </span><code>++ --</code></li>
+        <li><span>布尔操作符 </span><code>&amp;&amp; || ！</code></li>
+        <li><span>算术操作符 </span><code>+ - * / %</code></li>
+        <li><span>关系操作符 </span><code>&lt;&gt; &lt;=&gt;= == === != !==</code></li>
+        <li><span>条件（问号）操作符 </span><code>? :</code></li>
+        <li><span>赋值操作符 </span><code>= += -+ *= /= %=</code></li>
+    </ul>
+    <p><span>参考链接：</span></p>
+    <p><a href='https://www.runoob.com/js/js-operators.html' target="_blank"><span>JavaScript 运算符 | 菜鸟教程 (runoob.com)</span></a></p>
+    <h2 id='14-语句'><span>1.4 语句</span></h2>
+    <p><span>和其他高级语言一样，JavaScript也有条件语句，switch语句，for循环和while循环。</span></p>
+    <p><b><span>条件语句</span></b></p>
+    <p><span>和大部分高级语言的条件判断句类似，可以以C++的语法来写JavaScript的条件语句。</span></p>
+    <p><span>参考链接：</span></p>
+    <p><a href='https://www.runoob.com/js/js-if-else.html' target="_blank"><span>JavaScript If…Else 语句 | 菜鸟教程 (runoob.com)</span></a>
+    </p>
+    <p><b><span>switch语句</span></b></p>
+    <p><span>同上，参考C++的语法。</span></p>
+    <p><span>参考链接：</span></p>
+    <p><a href='https://www.runoob.com/js/js-switch.html' target="_blank"><span>JavaScript switch 语句 | 菜鸟教程 (runoob.com)</span></a></p>
+    <p><b><span>for循环</span></b></p>
+    <p><span>这里重点介绍JavaScript中的for循环，JavaScript的for循环既有C++中的语法，也有python的for循环的身影，还有类似C#的高级遍历，可以阅读如下代码块进行学习：</span></p>
+    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="javascript"
+        style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="javascript"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.38281px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+    </div>
+    <div class="CodeMirror-measure"></div>
+    <div style="position: relative; z-index: 1;"></div>
+    <div class="CodeMirror-code" role="presentation" style="">
+        <div class="CodeMirror-activeline" style="position: relative;">
+            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">var</span> <span class="cm-def">colors</span> <span class="cm-operator">=</span> [<span class="cm-string">'red'</span>, <span class="cm-string">'green'</span>, <span class="cm-string">'blue'</span>, <span class="cm-string">'brown'</span>];<span class="cm-tab" role="presentation" cm-text="	"> </span><span class="cm-comment">//colors是一个数组</span></span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//传统遍历（基本不用了）</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">for</span>(<span class="cm-keyword">var</span> <span class="cm-def">i</span><span class="cm-operator">=</span><span class="cm-number">0</span>;<span class="cm-variable-2">i</span><span class="cm-operator">&lt;</span><span class="cm-variable">colors</span>.<span class="cm-property">length</span>;<span class="cm-variable-2">i</span><span class="cm-operator">++</span>){</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">colors</span>[<span class="cm-variable-2">i</span>]);</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//for-in，专注下标</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">for</span>(<span class="cm-keyword">var</span> <span class="cm-def">c</span> <span class="cm-keyword">in</span> <span class="cm-variable">colors</span>){</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">colors</span>[<span class="cm-variable-2">c</span>]);</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//for-of，专注元素</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">for</span>(<span class="cm-keyword">var</span> <span class="cm-def">c</span> <span class="cm-keyword">of</span> <span class="cm-variable">colors</span>){</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable-2">c</span>);</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//高级遍历</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">colors</span>.<span class="cm-property">forEach</span>(<span class="cm-def">c</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable-2">c</span>));</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">var</span> <span class="cm-def">other</span> <span class="cm-operator">=</span> <span class="cm-variable">colors</span>.<span class="cm-property">map</span>(<span class="cm-def">c</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">c</span> <span class="cm-operator">+</span> <span class="cm-string">'X'</span>);<span class="cm-comment">//map不仅遍历，还返回另一个数组</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">other</span>);</span></pre>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 438px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 438px;"></div>
+    </div>
+    </div>
+    </pre>
+    <p><b><span>while循环</span></b></p>
+    <p><span>while循环同上条件语句和switch语句，参考C++语法即可。</span></p>
+    <h2 id='15-函数'><span>1.5 函数</span></h2>
+    <p><span>函数（ </span><code>function</code><span>）对任何语言来说都是一个核心的概念。通过函数可以封装任意多条语句，而且可以在任何地方、任何时候调用执行。</span></p>
+    <p><span>JavaScript的函数语句和C/C++的语法类似，需要注意的是函数的前面不用数据类型修饰函数返回参数，而是直接使用</span><code>function</code><span>作为前缀。对于需要返回参数的函数，可以直接在函数中添加</span><code>return</code><span>语句。还有一点不同的是，如果需要输入参数，函数名称后面的括号中不需要填写数据类型。</span>
+    </p>
+    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
+        lang="javascript"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="javascript"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+    </div>
+    <div class="CodeMirror-measure"></div>
+    <div style="position: relative; z-index: 1;"></div>
+    <div class="CodeMirror-code" role="presentation">
+        <div class="CodeMirror-activeline" style="position: relative;">
+            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">function</span> <span class="cm-def">sum</span>(<span class="cm-def">num1</span>, <span class="cm-def">num2</span>) {</span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-variable-2">num1</span> <span class="cm-operator">+</span> <span class="cm-variable-2">num2</span>;</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 69px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 69px;"></div>
+    </div>
+    </div>
+    </pre>
+    <p><span>JavaScript的语法非常松散，有如下几点需要注意：</span></p>
+    <blockquote>
+        <ol start=''>
+            <li><span>JavaScript函数不介意传递进来多少个参数，也不在乎传进来参数是什么数据类型。</span></li>
+            <li><span>如果在 JavaScript中定义了两个名字相同的函数，则该名字只属于后定义的函数。</span></li>
+            <li><span>JavaScript函数可以自带参数</span></li>
+        </ol>
+    </blockquote>
+    <h2 id='16-对象'><span>1.6 对象</span></h2>
+    <p><span>对象 </span><code>Object</code><span> 是JavaScript 中使用最多的一个类型。我们常将数据和方法封装在对象中，类似于C++的结构体。</span></p>
+    <p><span>创建对象有两种方式，如下：</span></p>
+    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="javascript"
+        style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="javascript"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+    </div>
+    <div class="CodeMirror-measure"></div>
+    <div style="position: relative; z-index: 1;"></div>
+    <div class="CodeMirror-code" role="presentation" style="">
+        <div class="CodeMirror-activeline" style="position: relative;">
+            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//方法一</span></span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//方式一</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">var</span> <span class="cm-def">person</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Object</span>();<span class="cm-comment">//生成空对象</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">person</span>.<span class="cm-property">name</span> <span class="cm-operator">=</span> <span class="cm-variable">Bob</span>;</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">person</span>.<span class="cm-property">sayName</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span>(){</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-keyword">this</span>.<span class="cm-property">name</span>);</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">};</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//方式二</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">var</span> <span class="cm-def">person</span> <span class="cm-operator">=</span> {</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">name</span>: <span class="cm-string">'Bob'</span>,</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">sayName</span>: <span class="cm-keyword">function</span>(){</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-keyword">this</span>.<span class="cm-property">name</span>);</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">};</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//方法二</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">function</span> <span class="cm-def">createPerson</span>(<span class="cm-def">name</span>){</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">var</span> <span class="cm-def">o</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Object</span>();</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable-2">o</span>.<span class="cm-property">name</span> <span class="cm-operator">=</span> <span class="cm-variable-2">name</span>;</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable-2">o</span>.<span class="cm-property">sayName</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span>(){</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-keyword">this</span>.<span class="cm-property">name</span>);</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  };</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-number">0</span>;</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 530px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 530px;"></div>
+    </div>
+    </div>
+    </pre>
+    <p><span>参考链接：</span></p>
+    <p><a href='https://www.runoob.com/js/js-obj-intro.html' target="_blank"><span>JavaScript 对象 | 菜鸟教程 (runoob.com)</span></a></p>
+    <h2 id='17-数组'><span>1.7 数组</span></h2>
+    <p><span>JavaScript的数组可以参考C++中的容器（例如Vector容器），python中的数组或者是C#中的List，总体语法风格都比较相似。</span></p>
+    <p><span>参考链接：</span></p>
+    <p><a href='https://www.runoob.com/js/js-obj-array.html' target="_blank"><span>JavaScript Array（数组）对象 | 菜鸟教程 (runoob.com)</span></a>
+    </p>
+    <h2 id='18-链式语法'><span>1.8 链式语法</span></h2>
+    <p><span>链式语法已变得非常流行。实际上这是一种非常容易实现的模式。基本上，你只需要让每个函数返回
+        </span><code>this</code><span>代表包含该函数的对象，这样其他函数就可以立即被调用。如下：</span></p>
+    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
+        lang="javascript"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="javascript"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+    </div>
+    <div class="CodeMirror-measure"></div>
+    <div style="position: relative; z-index: 1;"></div>
+    <div class="CodeMirror-code" role="presentation" style="">
+        <div class="CodeMirror-activeline" style="position: relative;">
+            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//链式语法</span></span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">var</span> <span class="cm-def">bird</span> <span class="cm-operator">=</span> {<span class="cm-comment">//定义对象字面量</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">catapult</span>: <span class="cm-keyword">function</span>() {</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">console</span>.<span class="cm-property">log</span>( <span class="cm-string">'Yippeeeeee!'</span> );</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-keyword">this</span>;<span class="cm-comment">//返回bird对象自身</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">  },</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">destroy</span>: <span class="cm-keyword">function</span>() {</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">console</span>.<span class="cm-property">log</span>( <span class="cm-string">"That'll teach you... you dirty pig!"</span> );</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-keyword">this</span>;</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">  }</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">};</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">bird</span>.<span class="cm-property">catapult</span>().<span class="cm-property">destroy</span>();<span class="cm-comment">//destroy()后还可以再链接吗？</span></span></pre>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 322px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 322px;"></div>
+    </div>
+    </div>
+    </pre>
+    <h2 id='19-闭包'><span>1.9 闭包</span></h2>
+    <p><span>JavaScript
+            变量可以是局部变量或全局变量。私有变量可以用到闭包。闭包就是函数的局部变量集合，只是这些局部变量在函数返回后会继续存在。闭包就是就是函数的“堆栈”在函数返回后并不释放，我们也可以理解为这些函数堆栈并不在栈上分配而是在堆上分配。</span>
+    </p>
+    <blockquote>
+        <p><span>当在一个函数内定义另外一个函数就会产生闭包</span></p>
+    </blockquote>
+    <h1 id='二typescript学习总结'><span>二、TypeScript学习总结</span></h1>
+    <h2 id='21-typescript简介'><span>2.1 TypeScript简介</span></h2>
+    <p><span>关于TypeScript，可以在官网上查到相关信息</span></p>
+    <p><a href='https://www.tslang.cn/' target="_blank"><span>TypeScript中文网 · TypeScript——JavaScript的超集 (tslang.cn)</span></a></p>
+    <blockquote>
+        <p><span>TypeScript是JavaScript类型的超集，它可以编译成纯JavaScript。TypeScript可以在任何浏览器、任何计算机和任何操作系统上运行，并且是开源的。</span></p>
+    </blockquote>
+    <p><span>百度百科上也给出了相关解释：</span></p>
+    <blockquote>
+        <p><span>TypeScript 起源于使用JavaScript开发的大型项目 。由于JavaScript语言本身的局限性，难以胜任和维护大型项目开发。因此微软开发了TypeScript
+                ，使得其能够胜任开发大型项目。</span></p>
+    </blockquote>
+    <p><span>TypeScript教程参考链接：</span></p>
+    <p><a href='https://www.runoob.com/typescript/ts-tutorial.html' target="_blank"><span>TypeScript 教程 | 菜鸟教程 (runoob.com)</span></a>
+    </p>
+    <p><b><span>TS配置</span></b></p>
+    <p><span>安装好</span><code>NodeJS</code><span>后，以管理员身份运行</span><code>CMD</code><span>或者</span><code>PowerShell</code><span>，使用</span><code>npm -g install ts-node typescript</code><span>命令进行全局安装</span>
+    </p>
+    <p><span>在</span><code>VSCode</code><span>中开发，建议安装插件：</span><code>TSLint</code><span>、</span><code>TypeScript Hero</code><span>等插件。</span>
+    </p>
+    <blockquote>
+        <p><span>TypeScript的文件后缀为</span><code>.ts</code></p>
+    </blockquote>
+    <h2 id='22-let和const'><span>2.2 let和const</span></h2>
+    <p><span>TypeScript不使用</span><code>var</code><span>，使用</span><code>let</code><span>或</span><code>const</code><span>申明变量，且作用域为块级及</span><code>{}</code><span>为界</span>
+    </p>
+    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
+        lang="typescript"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="typescript"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.38281px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+    </div>
+    <div class="CodeMirror-measure"></div>
+    <div style="position: relative; z-index: 1;"></div>
+    <div class="CodeMirror-code" role="presentation">
+        <div class="CodeMirror-activeline" style="position: relative;">
+            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">let</span> <span class="cm-def">lang</span>: <span class="cm-type">string</span> <span class="cm-operator">=</span> <span class="cm-string">'TypeScript'</span>;<span class="cm-comment">//如果省略类型说明，TS也可进行自动推断</span></span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">let</span> <span class="cm-def">age</span>: <span class="cm-type">number</span> <span class="cm-operator">=</span> <span class="cm-number">89</span>;</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">const</span> <span class="cm-def">pi</span>: <span class="cm-type">number</span> <span class="cm-operator">=</span> <span class="cm-number">3.14159</span>;<span class="cm-comment">//pi以后不可改变，类似常量</span></span></pre>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 115px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 115px;"></div>
+    </div>
+    </div>
+    </pre>
+    <p><span>参考链接：</span></p>
+    <p><a href='https://www.runoob.com/typescript/ts-variables.html' target="_blank"><span>TypeScript 变量声明 | 菜鸟教程
+                (runoob.com)</span></a></p>
+    <h2 id='23-解构'><span>2.3 解构</span></h2>
+    <p><span>将对象、数组中的元素拆分到指定变量中，以方便使用</span></p>
+    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="typescript"
+        style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="typescript"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+    </div>
+    <div class="CodeMirror-measure"></div>
+    <div style="position: relative; z-index: 1;"></div>
+    <div class="CodeMirror-code" role="presentation" style="">
+        <div class="CodeMirror-activeline" style="position: relative;">
+            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//解构数组</span></span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">let</span> <span class="cm-def">input</span> <span class="cm-operator">=</span> [<span class="cm-number">89</span>, <span class="cm-number">64</span>, <span class="cm-number">2018</span>, <span class="cm-number">10</span>];</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">let</span> [<span class="cm-def">first</span>, <span class="cm-def">second</span>] <span class="cm-operator">=</span> <span class="cm-variable">input</span>;<span class="cm-comment">//注意使用[]</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">first</span>); <span class="cm-comment">// 89</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">second</span>); <span class="cm-comment">// 64</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">let</span> [<span class="cm-def">one</span>, <span class="cm-meta">...</span><span class="cm-def">others</span>] <span class="cm-operator">=</span> <span class="cm-variable">input</span>; <span class="cm-comment">//剩余变量</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-meta">...</span><span class="cm-variable">others</span>);</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//展开</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">let</span> <span class="cm-def">newArr</span> <span class="cm-operator">=</span> [<span class="cm-number">89</span>, <span class="cm-meta">...</span><span class="cm-variable">others</span>, <span class="cm-number">18</span>];</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">newArr</span>);</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//解构对象</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">let</span> <span class="cm-def">o</span> <span class="cm-operator">=</span> {</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">a</span>: <span class="cm-string">"foo"</span>,</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">b</span>: <span class="cm-number">12</span>,</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">c</span>: <span class="cm-string">"bar"</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">};</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">let</span> {<span class="cm-def">a</span>, <span class="cm-def">b</span>} <span class="cm-operator">=</span> <span class="cm-variable">o</span>;<span class="cm-comment">//注意使用{}，且变量名需与对象中道属性名一致</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">a</span>, <span class="cm-variable">b</span>);</span></pre>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 438px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 438px;"></div>
+    </div>
+    </div>
+    </pre>
+    <p><span>参考链接：</span></p>
+    <p><a href='https://www.runoob.com/w3cnote/deconstruction-assignment.html' target="_blank"><span>ES6 解构赋值 | 菜鸟教程
+                (runoob.com)</span></a></p>
+    <p><a href='https://qige.io/web/web.html#ts-jg' target="_blank"><span>Web技术基础 (qige.io)</span></a></p>
+    <h2 id='24-函数'><span>2.4 函数</span></h2>
+    <p><span>TypeScript的函数定义要比JavaScript严格，需要指定函数中输入参数的类型，也可以让参数可以选择，还可以添加默认参数，如果不知道需要多少个参数，还可以使用剩余参数。在TypeScript的函数箭头函数（类似于lambda表达式），可以简化函数定义、解决this问题。如下：</span>
+    </p>
+    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="typescript"
+        style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="typescript"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.38281px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+    </div>
+    <div class="CodeMirror-measure"></div>
+    <div style="position: relative; z-index: 1;"></div>
+    <div class="CodeMirror-code" role="presentation" style="">
+        <div class="CodeMirror-activeline" style="position: relative;">
+            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//命名函数，有完整的参数和返回类型。可以不用，TS将自动进行类型推断但推荐使用！</span></span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">function</span> <span class="cm-def">add</span>(<span class="cm-def">x</span>: <span class="cm-type">number</span>, <span class="cm-def">y</span>: <span class="cm-type">number</span>): <span class="cm-type">number</span> {</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-keyword">return</span> <span class="cm-variable-2">x</span> <span class="cm-operator">+</span> <span class="cm-variable-2">y</span>;</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//匿名函数</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">let</span> <span class="cm-def">myAdd</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span>(<span class="cm-def">x</span>: <span class="cm-type">number</span>, <span class="cm-def">y</span>: <span class="cm-type">number</span>): <span class="cm-type">number</span> { <span class="cm-keyword">return</span> <span class="cm-variable-2">x</span> <span class="cm-operator">+</span> <span class="cm-variable-2">y</span>; };</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//可选参数，必须放在必要参数后</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">function</span> <span class="cm-def">greeting</span>(<span class="cm-def">firstName</span>: <span class="cm-type">string</span>, <span class="cm-def">lastName</span><span class="cm-operator">?</span>: <span class="cm-type">string</span>) {</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-keyword">if</span>(<span class="cm-variable-2">lastName</span>) {</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-string-2">`Hello ${</span><span class="cm-variable-2">firstName</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable-2">lastName</span><span class="cm-string-2">}!`</span>;</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">  }</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-keyword">return</span> <span class="cm-string-2">`Hello ${</span><span class="cm-variable-2">firstName</span><span class="cm-string-2">}!`</span>;</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//默认参数，不必在必要参数后</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">function</span> <span class="cm-def">greeting</span>(<span class="cm-def">firstName</span>: <span class="cm-type">string</span>, <span class="cm-def">lastName</span> <span class="cm-operator">=</span> <span class="cm-string">'Wang'</span>) {</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-keyword">return</span> <span class="cm-string-2">`Hello ${</span><span class="cm-variable-2">firstName</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable-2">lastName</span><span class="cm-string-2">}!`</span>;</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//剩余参数，会被当做个数不限的可选参数。可以一个都没有，也可以有任意个</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">function</span> <span class="cm-def">greeting</span>(<span class="cm-def">firstName</span>: <span class="cm-type">string</span>, <span class="cm-meta">...</span><span class="cm-def">restName</span>: <span class="cm-type">string</span>[]) {</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-keyword">return</span> <span class="cm-string-2">`Hello ${</span><span class="cm-variable-2">firstName</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable-2">restName</span>.<span class="cm-property">join</span>(<span class="cm-string">' '</span>)<span class="cm-string-2">}!`</span>;</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 645px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 645px;"></div>
+    </div>
+    </div>
+    </pre>
+    <h2 id='25-类'><span>2.5 类</span></h2>
+    <p><span>类的语法结构和所有面向对象的编程语言如C++、Java、Python等类似，这里不做过多介绍。</span></p>
+    <p><span>参考链接：</span></p>
+    <p><a href='https://www.runoob.com/typescript/ts-class.html' target="_blank"><span>TypeScript 类 | 菜鸟教程 (runoob.com)</span></a></p>
+    <p><a href='https://qige.io/web/web.html#ts-class' target="_blank"><span>Web技术基础 (qige.io)</span></a></p>
+    <h2 id='26-模块'><span>2.6 模块</span></h2>
+    <p><span>对于大型的项目，我们需要使用模块进行管理。每个 </span><code>.ts</code><span> 文件就是一个模块，通过 export 来对外部模块暴露元素，通过 import
+            来引入模块（类似于Java和python导入模块的语法）。</span></p>
+    <p><span>参考链接：</span></p>
+    <p><a href='https://www.runoob.com/typescript/ts-module.html' target="_blank"><span>TypeScript 模块 | 菜鸟教程 (runoob.com)</span></a></p>
+    <p><a href='https://qige.io/web/web.html#ts-module' target="_blank"><span>Web技术基础 (qige.io)</span></a></p>
+    <h1 id='三总结'><span>三、总结</span></h1>
+    <p><span>学习JavaScript和TypeScript的过程和其他编程语言一样，大都是按照语法、数据类型...顺序依次进行下去。JavaScript和TypeScript作为脚本语言，它的优势也非常明显：上手快，不需要像C/C++、Java、C#等语言写很多“壳”。在掌握一门编程语言后，会发现编程语言之间的共同性，通过这些共同性可以让我们快速的学习一门语言。对于JavaScript和TypeScript的更深入学习，可以在相关教程网站上找到资料，也可以在视频网站（如</span><a
+            href='https://www.bilibili.com/' target="_blank"><span>哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</span></a><span>）找到相关学习视频。</span></p>
+    <h1 id='四参考链接'><span>四、参考链接</span></h1>
+    <p><a href='https://baike.baidu.com/item/JavaScript/321142?fr=aladdin' target="_blank"><span>JavaScript_百度百科 (baidu.com)</span></a>
+    </p>
+    <p><a href='https://www.runoob.com/js/js-tutorial.html' target="_blank"><span>JavaScript 教程 | 菜鸟教程 (runoob.com)</span></a></p>
+    <p><a href='https://baike.baidu.com/item/typescript/4314718' target="_blank"><span>typescript_百度百科 (baidu.com)</span></a></p>
+    <p><a href='https://www.runoob.com/typescript/ts-tutorial.html' target="_blank"><span>TypeScript 教程 | 菜鸟教程 (runoob.com)</span></a>
+    </p>
+    </div>
+    </div>
+    <script src="./JS/cherryBlossom.js"></script>
+    <script type="text/javascript" src="../JS/mdb.min.js"></script>
+</body>
+
+</html>
